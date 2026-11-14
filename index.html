@@ -1246,8 +1246,9 @@ const cio = new IntersectionObserver(es => es.forEach(e => {
 }), {threshold:.5});
 document.querySelectorAll('.cnt').forEach(el => cio.observe(el));
 
-// ---------- 신청서 → kcstsa@nate.com 실제 전송 (FormSubmit) ----------
+// ---------- 신청서 → 구글 시트 DB(kcai.my 공용) + kcstsa@nate.com 알림 ----------
 const FORM_TO = 'kcstsa@nate.com';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbwhMKo9UDzOIid9JTI2yPc_ReHQ24IUEXhlxIXBA4eaCPp2y6DO6Wj-Lovg7dx7OFo/exec';
 const fm = document.getElementById('fm'), fmBtn = fm.querySelector('button[type=submit]'), fmMsg = document.getElementById('fmMsg');
 const say = (ok, ko, zh) => { fmMsg.className = 'fmsg ' + (ok ? 'ok' : 'err'); fmMsg.innerHTML = `<span class="ko">${ko}</span><span class="zh">${zh}</span>`; };
 fm.addEventListener('submit', async e => {
@@ -1272,13 +1273,15 @@ fm.addEventListener('submit', async e => {
   };
   fmBtn.disabled = true; fmBtn.style.opacity = .6;
   say(true,'전송 중입니다…','正在提交…');
+  // kcai.my와 같은 구글 시트 신청 DB(Apps Script)로 접수 → kcstsa@nate.com 알림
+  const pad = n => String(n).padStart(2,'0'), dt = new Date();
+  const no = 'CKMDM-' + String(dt.getFullYear()).slice(2) + pad(dt.getMonth()+1) + pad(dt.getDate()) + '-' + pad(dt.getHours()) + pad(dt.getMinutes()) + pad(dt.getSeconds());
+  const summary = '[CKMDM 참가 상담 신청] ' + no + '\n' + Object.entries(data).filter(([k])=>k.charAt(0)!=='_').map(([k,v])=>k+': '+v).join('\n') + '\n\n접수 경로: ckmdm.com 참가 상담 신청서';
   try {
-    const r = await fetch('https://formsubmit.co/ajax/' + FORM_TO, { method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify(data) });
-    const j = await r.json().catch(()=>({}));
-    if (r.ok && String(j.success) === 'true') {
-      f.reset();
-      say(true,'✓ 신청이 접수되었습니다. 협회 담당자가 빠르게 연락드리겠습니다.','✓ 申请已提交，协会负责人将尽快与您联系。');
-    } else throw new Error(j.message || r.status);
+    await fetch(GAS_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'},
+      body: JSON.stringify({ no, source:'ckmdm.com 참가상담', co:f.company.value.trim(), nm:f.person.value.trim(), ph:f.phone.value.trim(), em:f.email.value.trim(), ind:f.field.value, prod:it, msg:f.msg.value.trim()||'-', member:false, summary }) });
+    f.reset();
+    say(true,'✓ 신청이 접수되었습니다. (접수번호 '+no+') 협회 담당자가 빠르게 연락드리겠습니다.','✓ 申请已提交（编号 '+no+'），协会负责人将尽快与您联系。');
   } catch (err) {
     say(false,
       `전송에 실패했습니다. 잠시 후 다시 시도하시거나 <a href="mailto:${FORM_TO}" style="text-decoration:underline">${FORM_TO}</a>로 직접 보내주세요.`,
