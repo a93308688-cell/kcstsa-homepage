@@ -3,716 +3,1261 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>한중과학기술서비스협회 KCSTSA</title>
-<meta name="description" content="한중과학기술서비스협회(KCSTSA) — 한·중 기업과 기관의 투자유치, 기술협력, 시장진출을 실질적 성과로 연결하는 한·중 과학기술 협력 플랫폼">
-<meta name="theme-color" content="#0E2A54">
-<meta property="og:title" content="한중과학기술서비스협회 KCSTSA">
-<meta property="og:description" content="신뢰를 성과로 잇는 한·중 과학기술 협력 플랫폼">
-<link rel="icon" type="image/png" href="img01.png">
+<title>CKMDM | 한·중 의료기기 산업협력 플랫폼 · 中韩医疗器械产业合作平台</title>
+<meta name="description" content="CKMDM — 한중과학기술서비스협회가 총괄 기획·운영하는 한·중 의료기기 산업협력 플랫폼. 비즈니스 매칭부터 위고 산업단지 입주·현지생산·유통·투자 연계까지.">
+<link rel="canonical" href="https://ckmdm.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ckmdm.com/">
+<meta property="og:title" content="CKMDM | 한·중 의료기기 산업협력 플랫폼">
+<meta property="og:description" content="매칭에서 입주·생산·유통·투자까지 — 한국 의료기기의 중국 진출을 한 번에.">
+<meta property="og:image" content="https://ckmdm.com/images/hero-bg.png">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<link rel="icon" href="https://ckmdm.com/images/logo-color.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap">
 <style>
+/* =========================================================
+   CKMDM — 브랜드 시스템 (기존 ckmdm.com 컬러 계승)
+   ========================================================= */
 :root{
-  --navy:#0E2A54; --navy2:#10356D; --navy3:#173F7A; --red:#BB1932; --red2:#D42A45;
-  --ink:#1B2230; --body:#4A5568; --muted:#7A8496; --line:#E3E7EE; --bg:#F4F6FA; --white:#fff;
-  --ko:'Pretendard','Noto Sans KR',system-ui,sans-serif;
-  --en:'Montserrat','Pretendard','Noto Sans KR',sans-serif;
+  --blue:#2C91EC; --blue-d:#1870D1; --blue-soft:#EAF4FD;
+  --royal:#1E3FAE; --red:#D7263D;
+  --navy:#0B1B33; --navy2:#16315C; --navy3:#0E2546;
+  --bg:#F5F8FC; --bg2:#EEF3FB; --text:#15202E; --muted:#677183; --line:#E4EAF2;
+  --white:#fff; --r:20px; --r-s:14px;
+  --sh:0 12px 32px rgba(15,35,70,.07); --sh2:0 24px 60px rgba(15,35,70,.14);
+  --hh:80px; --w:1240px;
+  --en:'Inter',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{font-family:var(--ko);color:var(--ink);background:#fff;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body.zh{font-family:'Noto Sans SC',var(--ko)}
-body.zh .ko, body:not(.zh) .zh{display:none!important}
-img{display:block;max-width:100%}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh)}
+body{font-family:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:var(--text);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-x:hidden}
+html[lang="zh"] body{font-family:'Noto Sans SC','Noto Sans KR',sans-serif}
 a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer}
-.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
-section{padding:120px 0}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 28px;width:100%}
+html[lang="ko"] .zh{display:none!important}
+html[lang="zh"] .ko{display:none!important}
+.en{font-family:var(--en)}
+
+/* ---------- 공통 타이포 ---------- */
+.kicker{display:inline-flex;align-items:center;gap:12px;font-family:var(--en);font-size:13px;font-weight:700;letter-spacing:.2em;color:var(--blue);text-transform:uppercase}
+.kicker:before{content:"";width:28px;height:2px;background:currentColor}
+.kicker.c{justify-content:center}
+.kicker.c:after{content:"";width:28px;height:2px;background:currentColor}
+.h2{font-size:clamp(30px,3.6vw,48px);font-weight:900;letter-spacing:-.03em;line-height:1.28;margin-top:16px}
+.h2 b{color:var(--blue)}
+.desc{color:var(--muted);font-size:17.5px;margin-top:20px;max-width:720px}
+.center{text-align:center}.center .desc{margin-left:auto;margin-right:auto}
+section{padding:130px 0;position:relative}
 .bg{background:var(--bg)}
+.dark{background:var(--navy);color:#fff}
+.dark .desc{color:rgba(255,255,255,.7)}
+.dark .kicker{color:#7CC0FF}
 
-/* section titles — official style */
-.st{text-align:center;margin-bottom:64px}
-.st .en{font-family:var(--en);font-weight:700;font-size:14px;letter-spacing:.32em;color:var(--red);text-transform:uppercase;display:block;margin-bottom:14px}
-.st h2{font-size:clamp(28px,3.2vw,42px);font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1.3}
-.st p{margin-top:16px;color:var(--body);font-size:17px}
-.st.left{text-align:left}
-.st.light h2{color:#fff}.st.light p{color:#B9C6DA}.st.light .en{color:#FF6B7F}
+/* ---------- 버튼 ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:17px 34px;border-radius:60px;font-weight:700;font-size:16px;transition:.3s;cursor:pointer;border:0;white-space:nowrap}
+.btn svg{width:18px;height:18px;transition:.3s}
+.btn:hover svg{transform:translateX(4px)}
+.btn-p{background:var(--blue);color:#fff;box-shadow:0 12px 30px rgba(44,145,236,.4)}
+.btn-p:hover{background:var(--blue-d);transform:translateY(-2px)}
+.btn-w{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(6px)}
+.btn-w:hover{background:#fff;color:var(--navy)}
+.btn-r{background:var(--red);color:#fff;box-shadow:0 12px 30px rgba(215,38,61,.45)}
+.btn-r:hover{background:#B81D31;transform:translateY(-2px)}
+@media(max-width:640px){.hero .btns .btn{flex:1 1 100%;justify-content:center}}
 
-/* header */
-header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,box-shadow .3s}
-.hd{height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{display:block;height:46px}
-.logo img{height:46px;width:auto}
-.logo .dark{display:none}
-header.on{background:#fff;box-shadow:0 2px 20px rgba(14,42,84,.08)}
-header.on .logo .light{display:none}
-header.on .logo .dark{display:block}
-nav ul{display:flex;gap:38px;list-style:none}
-nav a{font-size:16px;font-weight:600;color:#fff;transition:color .2s;position:relative;padding:8px 0}
-header.on nav a{color:var(--ink)}
-nav a:hover{color:var(--red2)}
-header.on nav a:hover{color:var(--red)}
-.hd-r{display:flex;align-items:center;gap:14px}
-.lang{display:flex;border:1px solid rgba(255,255,255,.5);border-radius:40px;overflow:hidden}
+/* =========================================================
+   HEADER
+   ========================================================= */
+header{position:fixed;inset:0 0 auto;z-index:100;height:var(--hh);transition:.35s}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:1400px}
+.logo{display:flex;align-items:center;height:100%}
+.logo img{height:30px;width:auto}
+.logo .c{display:none}
+header.on{background:rgba(255,255,255,.96);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line),0 8px 30px rgba(15,35,70,.06)}
+header.on .logo .w{display:none}
+header.on .logo .c{display:block}
+.gnb{display:flex;align-items:center;gap:6px}
+.gnb>a{color:#fff;font-size:15px;font-weight:500;padding:10px 14px;border-radius:30px;transition:.25s;position:relative}
+.gnb>a:hover{background:rgba(255,255,255,.12)}
+header.on .gnb>a{color:var(--text)}
+header.on .gnb>a:hover{background:var(--blue-soft);color:var(--blue)}
+.gnb .cta{background:var(--blue);color:#fff!important;font-weight:700;margin-left:8px;padding:10px 22px}
+.gnb .cta:hover{background:var(--blue-d)!important}
+.lang{display:flex;margin-left:12px;border:1px solid rgba(255,255,255,.35);border-radius:40px;padding:3px}
 header.on .lang{border-color:var(--line)}
-.lang button{background:none;border:0;color:#fff;font-size:13px;font-weight:600;padding:7px 14px}
+.lang button{border:0;background:none;color:#fff;font-size:13px;font-weight:600;padding:6px 13px;border-radius:30px;cursor:pointer}
 header.on .lang button{color:var(--muted)}
-.lang button.sel{background:var(--red);color:#fff!important}
-.burger{display:none;background:none;border:0;width:30px;height:22px;position:relative}
-.burger i{position:absolute;left:0;right:0;height:2px;background:#fff;transition:.3s}
-header.on .burger i{background:var(--ink)}
-.burger i:nth-child(1){top:2px}.burger i:nth-child(2){top:10px}.burger i:nth-child(3){top:18px}
+.lang button.on{background:#fff;color:var(--navy)!important}
+header.on .lang button.on{background:var(--navy);color:#fff!important}
+.ham{display:none;width:44px;height:44px;border:0;background:none;cursor:pointer;position:relative}
+.ham i{position:absolute;left:11px;right:11px;height:2px;background:#fff;transition:.3s}
+.ham i:nth-child(1){top:15px}.ham i:nth-child(2){top:21px}.ham i:nth-child(3){top:27px}
+header.on .ham i{background:var(--navy)}
+.ham.x i:nth-child(1){top:21px;transform:rotate(45deg)}.ham.x i:nth-child(2){opacity:0}.ham.x i:nth-child(3){top:21px;transform:rotate(-45deg)}
 
-/* hero slider */
-.hero{position:relative;height:100vh;min-height:640px;color:#fff;overflow:hidden;background:var(--navy)}
-.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease}
-.slide.act{opacity:1}
-.slide img{width:100%;height:100%;object-fit:cover;object-position:center 72%;transform:scale(1.08);transition:transform 7s ease}
-.slide.act img{transform:scale(1)}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,24,50,.72) 0%,rgba(9,24,50,.62) 45%,rgba(9,24,50,.9) 100%)}
-.hero-in{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px}
-.hero .en{font-family:var(--en);font-weight:700;letter-spacing:.5em;font-size:clamp(13px,1.3vw,17px);opacity:.9;margin-bottom:22px;padding-left:.5em}
-.hero h1{font-size:clamp(40px,6vw,80px);font-weight:800;letter-spacing:-.03em;line-height:1.15;text-shadow:0 4px 30px rgba(0,0,0,.3)}
-.hero .lead{margin-top:24px;font-size:clamp(16px,1.6vw,21px);font-weight:400;max-width:820px;opacity:.95;line-height:1.7}
-.hero .btns{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 34px;border-radius:50px;font-weight:700;font-size:16px;transition:.25s;border:2px solid transparent}
-.btn-red{background:var(--red);color:#fff}
-.btn-red:hover{background:var(--red2)}
-.btn-line{border-color:rgba(255,255,255,.75);color:#fff}
-.btn-line:hover{background:#fff;color:var(--navy)}
-.btn-navy{background:var(--navy);color:#fff}
-.btn-navy:hover{background:var(--navy3)}
-.dots{position:absolute;z-index:3;bottom:120px;left:50%;transform:translateX(-50%);display:flex;gap:10px}
-.dots button{width:10px;height:10px;border-radius:10px;border:0;background:rgba(255,255,255,.45);transition:.3s;padding:0}
-.dots button.act{width:34px;background:#fff}
-.cap{position:absolute;z-index:3;right:28px;bottom:120px;font-size:13px;opacity:.75}
-.scroll{position:absolute;z-index:3;bottom:40px;left:50%;transform:translateX(-50%);font-family:var(--en);font-size:11px;letter-spacing:.3em;opacity:.8;display:flex;flex-direction:column;align-items:center;gap:10px}
-.scroll i{width:1px;height:40px;background:linear-gradient(#fff,transparent);animation:sc 2s infinite}
-@keyframes sc{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;padding:0}
+.hero-bg{position:absolute;inset:0;background:#0B1B33 center/cover no-repeat;animation:kb 22s ease-in-out infinite alternate;transform-origin:center}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.14) translate(-1%,-1%)}}
+.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(6,16,34,.92) 0%,rgba(11,27,51,.78) 42%,rgba(11,27,51,.35) 75%,rgba(11,27,51,.55) 100%)}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:260px;z-index:1;background:linear-gradient(to top,rgba(6,16,34,.95),transparent)}
+.hero .wrap{position:relative;z-index:2;padding-top:calc(var(--hh) + 60px);padding-bottom:200px}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:9px 18px 9px 10px;border-radius:40px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);font-size:13.5px;font-weight:500}
+.badge b{background:var(--red);color:#fff;font-family:var(--en);font-size:11px;letter-spacing:.08em;padding:4px 10px;border-radius:20px}
+.hero h1{font-size:clamp(38px,5.6vw,76px);font-weight:900;line-height:1.16;letter-spacing:-.035em;margin-top:30px;max-width:980px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#5DB3FF,#2C91EC 60%,#8FD0FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{font-size:clamp(16px,1.5vw,19.5px);color:rgba(255,255,255,.82);max-width:720px;margin-top:28px;font-weight:300}
+.hero .btns{display:flex;gap:14px;margin-top:44px;flex-wrap:wrap}
+.hero-bar{position:absolute;left:0;right:0;bottom:0;z-index:3}
+.hero-bar .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-bottom:0}
+.hb{padding:30px 28px 34px;border-top:1px solid rgba(255,255,255,.18);border-right:1px solid rgba(255,255,255,.1)}
+.hb:last-child{border-right:0}
+.hb b{display:block;font-family:var(--en);font-size:clamp(30px,3vw,44px);font-weight:800;line-height:1;letter-spacing:-.02em}
+.hb b small{font-size:.5em;color:#7CC0FF;margin-left:3px}
+.hb>span{display:block;font-size:14px;color:rgba(255,255,255,.7);margin-top:10px}
+.scroll{position:absolute;right:40px;bottom:180px;z-index:3;writing-mode:vertical-rl;font-family:var(--en);font-size:11px;letter-spacing:.3em;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:14px}
+.scroll:after{content:"";width:1px;height:60px;background:linear-gradient(rgba(255,255,255,.7),transparent);animation:sl 2s infinite}
+@keyframes sl{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-/* numbers band */
-.nums{background:var(--navy);color:#fff;padding:0}
-.nums .wrap{display:grid;grid-template-columns:repeat(5,1fr)}
-.num{padding:46px 10px;text-align:center;border-left:1px solid rgba(255,255,255,.1)}
-.num:first-child{border-left:0}
-.num b{display:block;font-family:var(--en);font-size:clamp(32px,3.4vw,46px);font-weight:800;line-height:1.1}
-.num b small{font-size:.6em;color:var(--red2)}
-.num span{display:block;margin-top:8px;font-size:15px;color:#B9C6DA}
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+.ov{display:grid;grid-template-columns:1fr 1.08fr;gap:80px;align-items:center}
+.ov-points{margin-top:40px;display:grid;gap:14px}
+.ov-points>div{display:flex;gap:18px;align-items:flex-start;padding:20px 22px;border-radius:var(--r-s);background:var(--bg);transition:.3s}
+.ov-points>div:hover{background:var(--blue-soft);transform:translateX(6px)}
+.ov-points i{flex:0 0 44px;height:44px;border-radius:12px;background:#fff;display:grid;place-items:center;color:var(--blue);box-shadow:var(--sh)}
+.ov-points i svg{width:22px;height:22px}
+.ov-points b{display:block;font-size:17px}
+.ov-points span{color:var(--muted);font-size:14.5px}
+.collage{position:relative;height:620px}
+.collage figure{position:absolute;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh2)}
+.collage img{width:100%;height:100%;object-fit:cover;transition:1s}
+.collage figure:hover img{transform:scale(1.06)}
+.collage .c1{left:0;top:0;width:72%;height:62%}
+.collage .c2{right:0;top:30%;width:52%;height:44%;border:8px solid #fff}
+.collage .c3{left:8%;bottom:0;width:46%;height:34%;border:8px solid #fff}
+.collage .tag{position:absolute;right:4%;bottom:6%;background:var(--navy);color:#fff;border-radius:var(--r-s);padding:22px 26px;box-shadow:var(--sh2);z-index:2}
+.collage .tag b{font-family:var(--en);font-size:40px;font-weight:800;line-height:1;color:#7CC0FF;display:block}
+.collage .tag span{font-size:13.5px;opacity:.8}
 
-/* greeting */
-.greet{display:grid;grid-template-columns:1fr 1.15fr;gap:80px;align-items:center}
-.greet-img{position:relative}
-.greet-img img{border-radius:18px;width:100%;aspect-ratio:4/3.4;object-fit:cover;box-shadow:0 30px 60px rgba(14,42,84,.18)}
-.greet-img .badge{position:absolute;left:-26px;top:-26px;background:var(--red);color:#fff;border-radius:16px;padding:24px 28px;font-family:var(--en);font-weight:800;font-size:28px;line-height:1.2;box-shadow:0 20px 40px rgba(187,25,50,.3)}
-.greet-img .badge small{display:block;font-family:var(--ko);font-weight:500;font-size:13px;margin-top:6px;opacity:.9}
-.greet-txt h3{font-size:clamp(24px,2.4vw,32px);font-weight:800;color:var(--navy);line-height:1.45;letter-spacing:-.03em;margin-bottom:26px}
-.greet-txt h3 em{font-style:normal;color:var(--red)}
-.greet-txt p{color:var(--body);font-size:16.5px;margin-bottom:14px}
-.sign{margin-top:28px;font-weight:700;font-size:18px;color:var(--navy)}
-.sign::before{content:"";display:inline-block;width:30px;height:2px;background:var(--red);vertical-align:middle;margin-right:12px}
+/* =========================================================
+   PROGRAM (4 STEPS)
+   ========================================================= */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:64px}
+.st{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:.4s;display:flex;flex-direction:column}
+.st:hover{transform:translateY(-10px);box-shadow:var(--sh2)}
+.st .ph{height:220px;position:relative;overflow:hidden;background:var(--bg2)}
+.st .ph img{width:100%;height:100%;object-fit:cover;transition:1s}
+.st:hover .ph img{transform:scale(1.08)}
+.st .ph.contain img{object-fit:contain;padding:18px;background:#fff}
+.st .no{position:absolute;left:18px;top:18px;background:var(--navy);color:#fff;font-family:var(--en);font-weight:800;font-size:12px;letter-spacing:.12em;padding:7px 13px;border-radius:30px}
+.st .bd{padding:28px 26px 30px;flex:1;display:flex;flex-direction:column}
+.st h3{font-size:22px;font-weight:800;letter-spacing:-.02em}
+.st p{color:var(--muted);font-size:15px;margin-top:10px}
+.st ul{list-style:none;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.st li{font-size:14.5px;padding:4px 0 4px 22px;position:relative;font-weight:500}
+.st li:before{content:"";position:absolute;left:0;top:11px;width:12px;height:12px;border-radius:50%;background:var(--blue-soft);box-shadow:inset 0 0 0 3px var(--blue)}
+.flow{display:flex;justify-content:center;align-items:center;gap:0;margin-top:44px;flex-wrap:wrap}
+.flow span{font-size:15px;font-weight:700;color:var(--navy);padding:12px 22px;background:#fff;border-radius:40px;box-shadow:var(--sh)}
+.flow i{width:40px;height:2px;background:linear-gradient(90deg,var(--blue),transparent)}
 
-/* about */
-.mv{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.mv-c{background:#fff;border-radius:18px;padding:48px;box-shadow:0 10px 40px rgba(14,42,84,.06);position:relative;overflow:hidden}
-.mv-c .en{font-family:var(--en);font-weight:800;font-size:15px;letter-spacing:.2em;color:var(--red)}
-.mv-c h3{margin:14px 0 14px;font-size:24px;font-weight:800;color:var(--navy);line-height:1.45;letter-spacing:-.02em}
-.mv-c p{color:var(--body)}
-.mv-c .big{position:absolute;right:-10px;bottom:-30px;font-family:var(--en);font-weight:800;font-size:120px;color:var(--bg);line-height:1;z-index:0;pointer-events:none}
-.mv-c > *:not(.big){position:relative;z-index:1}
-.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px}
-.val{background:var(--navy);color:#fff;border-radius:18px;padding:40px;display:flex;gap:22px;align-items:flex-start}
-.val .ic{flex:none;width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;font-size:24px;font-weight:800}
-.val h4{font-size:21px;margin-bottom:6px}
-.val p{color:#B9C6DA;font-size:15px}
-.base{margin-top:28px;background:#fff;border-radius:18px;padding:36px 48px;display:grid;grid-template-columns:200px 1fr;gap:16px 40px;align-items:center;box-shadow:0 10px 40px rgba(14,42,84,.06)}
-.base h4{font-size:19px;color:var(--navy);font-weight:800}
-.base h4 small{display:block;font-size:13px;color:var(--muted);font-weight:500;margin-top:4px}
-.cities{display:flex;flex-wrap:wrap;gap:8px}
-.cities span{padding:8px 18px;border-radius:40px;background:var(--bg);font-weight:600;font-size:15px;color:var(--ink)}
-.cities span.hq{background:var(--red);color:#fff}
+/* =========================================================
+   KOREA PAVILION
+   ========================================================= */
+.pav{position:relative;overflow:hidden}
+.pav-bg{position:absolute;inset:0;background:center/cover;opacity:.18;filter:grayscale(.3)}
+.pav:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,var(--navy) 35%,rgba(11,27,51,.85));z-index:0}
+.pav .wrap{position:relative;z-index:1}
+.pav-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.chk{list-style:none;margin-top:36px}
+.chk li{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.chk li i{flex:0 0 36px;height:36px;border-radius:50%;background:var(--blue);display:grid;place-items:center;font-style:normal;font-family:var(--en);font-weight:800;font-size:14px}
+.chk b{display:block;font-size:18px}
+.chk span{color:rgba(255,255,255,.66);font-size:15px}
+.pav-card{border-radius:24px;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px)}
+.pav-card .top{height:250px;position:relative}
+.pav-card .top img{width:100%;height:100%;object-fit:cover}
+.pav-card .top:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,27,51,.95),transparent 60%)}
+.pav-card .top p{position:absolute;left:26px;bottom:20px;z-index:1;font-family:var(--en);font-weight:800;letter-spacing:.14em;font-size:13px;color:#7CC0FF}
+.zones{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:22px}
+.zones div{border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:16px 18px;transition:.3s}
+.zones div:hover{border-color:var(--blue);background:rgba(44,145,236,.1)}
+.zones .w{grid-column:1/-1;background:rgba(44,145,236,.14);border-color:rgba(44,145,236,.6)}
+.zones b{display:block;font-size:15.5px}
+.zones span{font-size:13px;color:rgba(255,255,255,.6)}
 
-/* programs */
-.pg{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
-.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 40px rgba(14,42,84,.07);transition:.35s;display:flex;flex-direction:column}
-.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(14,42,84,.14)}
-.card .ph{aspect-ratio:16/8;overflow:hidden;position:relative}
-.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
-.card:hover .ph img{transform:scale(1.06)}
-.card .ph .no{position:absolute;left:24px;top:22px;font-family:var(--en);font-weight:800;color:#fff;font-size:15px;letter-spacing:.15em;background:rgba(14,42,84,.75);padding:6px 14px;border-radius:30px}
-.card .ph .key{position:absolute;right:22px;top:22px;background:var(--red);color:#fff;font-weight:700;font-size:13px;padding:6px 14px;border-radius:30px}
-.card .bd{padding:34px 38px 38px;flex:1}
-.card h3{font-size:23px;font-weight:800;color:var(--navy);letter-spacing:-.02em;margin-bottom:12px}
-.card p{color:var(--body);font-size:15.5px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.tags span{font-size:13px;font-weight:600;color:var(--navy2);background:#EAF0F9;padding:5px 13px;border-radius:30px}
+/* =========================================================
+   2026 RECAP
+   ========================================================= */
+.recap-top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+.meta>div{display:flex;gap:18px;align-items:center;background:#fff;border-radius:var(--r-s);padding:24px;box-shadow:var(--sh)}
+.meta img{width:54px;height:54px;object-fit:contain}
+.meta small{font-family:var(--en);font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--blue)}
+.meta b{display:block;font-size:16px;line-height:1.5;margin-top:2px}
+.days{margin-top:56px;display:grid;grid-template-columns:300px 1fr;gap:24px;background:#fff;border-radius:24px;box-shadow:var(--sh);overflow:hidden}
+.dtabs{background:var(--navy);padding:18px;display:flex;flex-direction:column;gap:6px}
+.dtabs button{text-align:left;border:0;background:transparent;color:rgba(255,255,255,.6);padding:18px 20px;border-radius:14px;cursor:pointer;transition:.25s}
+.dtabs button b{display:block;font-family:var(--en);font-size:14px;letter-spacing:.1em;color:#7CC0FF}
+.dtabs button span{font-size:16px;font-weight:700}
+.dtabs button:hover{background:rgba(255,255,255,.06);color:#fff}
+.dtabs button.on{background:var(--blue);color:#fff}
+.dtabs button.on b{color:#fff}
+.dpanel{display:none;grid-template-columns:1fr 360px;gap:30px;padding:36px 36px 36px 12px}
+.dpanel.on{display:grid;animation:fade .5s}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.dpanel h4{font-size:22px;font-weight:800}
+.dpanel .loc{font-size:14px;color:var(--muted);margin-top:4px}
+.tl{list-style:none;margin-top:24px;position:relative}
+.tl:before{content:"";position:absolute;left:96px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:96px 1fr;gap:26px;padding:12px 0;position:relative}
+.tl li:after{content:"";position:absolute;left:91px;top:20px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.tl time{font-family:var(--en);font-weight:700;font-size:14.5px;color:var(--navy);line-height:1.5}
+.tl b{display:block;font-size:16.5px}
+.tl span{font-size:14px;color:var(--muted)}
+.tl li.hl b{color:var(--blue)}
+.dpanel figure{border-radius:var(--r-s);overflow:hidden;min-height:300px;position:relative}
+.dpanel figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
-/* events */
-.ev{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;margin-bottom:90px}
-.ev:last-child{margin-bottom:0}
-.ev.rev .ev-img{order:2}
-.ev-img{position:relative}
-.ev-img img{width:100%;aspect-ratio:16/10.5;object-fit:cover;border-radius:18px;box-shadow:0 24px 50px rgba(14,42,84,.15)}
-.ev-img .tagl{position:absolute;left:22px;bottom:22px;background:#fff;color:var(--navy);font-weight:700;font-size:13px;padding:8px 16px;border-radius:30px;box-shadow:0 6px 20px rgba(0,0,0,.15)}
-.ev .lab{font-family:var(--en);font-weight:700;color:var(--red);letter-spacing:.2em;font-size:13px}
-.ev h3{font-size:clamp(26px,2.6vw,34px);font-weight:800;color:var(--navy);margin:10px 0 6px;letter-spacing:-.03em;line-height:1.3}
-.ev .date{color:var(--muted);font-weight:600;font-size:15px;margin-bottom:18px}
-.ev p{color:var(--body)}
-.org{margin-top:22px;border-top:1px solid var(--line)}
-.org div{display:grid;grid-template-columns:70px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
-.org dt{font-weight:700;color:var(--navy)}
-.org dd{color:var(--body)}
-.evn{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap}
-.evn div{flex:1;min-width:120px;background:var(--bg);border-radius:14px;padding:18px 20px}
-.evn b{display:block;font-family:var(--en);font-size:28px;font-weight:800;color:var(--navy);line-height:1.15}
-.evn span{font-size:13.5px;color:var(--muted)}
-.more{display:inline-flex;margin-top:24px;font-weight:700;color:var(--red);gap:8px;align-items:center}
-.more:hover{gap:14px}
+/* =========================================================
+   GALLERY
+   ========================================================= */
+.gal{columns:3;column-gap:16px;margin-top:60px}
+.gal figure{break-inside:avoid;margin-bottom:16px;border-radius:var(--r-s);overflow:hidden;position:relative;cursor:zoom-in;background:var(--bg2)}
+.gal img{width:100%;transition:.8s}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;inset:auto 0 0 0;padding:40px 20px 16px;background:linear-gradient(to top,rgba(11,27,51,.85),transparent);color:#fff;font-size:14.5px;font-weight:600;opacity:0;transform:translateY(10px);transition:.4s}
+.gal figure:hover figcaption{opacity:1;transform:none}
+.lb{position:fixed;inset:0;z-index:300;background:rgba(5,12,25,.94);display:none;align-items:center;justify-content:center;padding:60px 90px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:82vh;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lb p{position:absolute;bottom:26px;left:0;right:0;text-align:center;color:#fff;font-size:15px}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.1);color:#fff;width:56px;height:56px;border-radius:50%;cursor:pointer;font-size:24px;transition:.2s}
+.lb button:hover{background:var(--blue)}
+.lb .x{top:24px;right:24px}.lb .pv{left:24px;top:50%;transform:translateY(-50%)}.lb .nx{right:24px;top:50%;transform:translateY(-50%)}
 
-/* results */
-.res{background:linear-gradient(135deg,#0B2247 0%,#10356D 100%);color:#fff;position:relative;overflow:hidden}
-.res::before{content:"KCSTSA";position:absolute;right:-40px;bottom:-60px;font-family:var(--en);font-weight:800;font-size:260px;color:rgba(255,255,255,.03);letter-spacing:-.02em;pointer-events:none}
-.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
-.rc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:38px 34px;transition:.3s}
-.rc:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
-.rc .k{font-size:13px;font-weight:700;color:#FF8A9A;letter-spacing:.05em}
-.rc b{display:block;font-family:var(--en);font-size:clamp(40px,4vw,56px);font-weight:800;line-height:1.1;margin:14px 0 6px}
-.rc .u{font-size:15px;color:#DCE4F0;font-weight:600}
-.rc p{margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);color:#AFC0D8;font-size:14.5px}
-.rc.wide{grid-column:span 3;display:grid;grid-template-columns:1fr 2fr;gap:30px;align-items:center}
-.rc.wide p{margin:0;padding:0 0 0 30px;border-top:0;border-left:1px solid rgba(255,255,255,.12)}
+/* =========================================================
+   WEGO
+   ========================================================= */
+.wego-row{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:90px}
+.wego-row:first-of-type{margin-top:60px}
+.wego-row.rev .wi{order:2}
+.wi{border-radius:24px;overflow:hidden;aspect-ratio:1/1;max-height:520px;box-shadow:var(--sh2);background:#fff}
+.wi img{width:100%;height:100%;object-fit:cover;transition:1s}
+.wi:hover img{transform:scale(1.05)}
+.wi.contain img{object-fit:contain;padding:30px}
+.wt .big{font-family:var(--en);font-size:clamp(52px,6vw,84px);font-weight:900;line-height:1;letter-spacing:-.04em;background:linear-gradient(135deg,var(--royal),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;margin-top:22px}
+.wt h3{font-size:clamp(24px,2.6vw,34px);font-weight:800;line-height:1.35;margin-top:14px;letter-spacing:-.02em}
+.wt p{color:var(--muted);font-size:16.5px;margin-top:16px}
+.wtags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.wtags span{background:var(--blue-soft);color:var(--blue-d);font-weight:700;font-size:14px;padding:8px 16px;border-radius:30px}
 
-/* gallery */
-.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:14px}
-.gal figure{position:relative;overflow:hidden;border-radius:14px}
-.gal figure.w{grid-column:span 2}
-.gal figure.h{grid-row:span 2}
-.gal img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
-.gal figure:hover img{transform:scale(1.06)}
-.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 18px 14px;background:linear-gradient(transparent,rgba(9,24,50,.8));color:#fff;font-size:14px;font-weight:600}
+/* =========================================================
+   ORGANIZER / PARTNERS
+   ========================================================= */
+.org{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center}
+.kl{display:inline-flex;flex-direction:column;align-items:center;gap:10px;background:#fff;border-radius:var(--r-s);padding:22px 30px}
+.kl img{height:44px;width:auto}
+.kl span{color:var(--navy);font-weight:800;font-size:14.5px;letter-spacing:.02em}
+.nums{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.nums div{border:1px solid rgba(255,255,255,.12);border-radius:var(--r-s);padding:30px 26px;background:rgba(255,255,255,.03);transition:.3s}
+.nums div:hover{background:rgba(44,145,236,.12);border-color:rgba(44,145,236,.5)}
+.nums b{display:block;font-family:var(--en);font-size:44px;font-weight:800;line-height:1;color:#7CC0FF}
+.nums b.kr{font-family:inherit;font-size:36px}
+.nums span{font-size:14.5px;color:rgba(255,255,255,.72);display:block;margin-top:10px}
+.plabel{font-family:var(--en);font-size:13px;font-weight:700;letter-spacing:.2em;color:rgba(255,255,255,.5);margin:90px 0 22px;text-align:center}
+.plogos{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.plogos div{background:#fff;border-radius:var(--r-s);height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 20px;transition:.3s}
+.plogos div:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.plogos img{max-height:46px;max-width:100%;object-fit:contain}
+.plogos .txt{font-weight:800;color:var(--navy);font-size:15.5px;text-align:center;line-height:1.35}
+.plogos small{font-size:11px;color:var(--muted);font-weight:600;margin-top:8px;text-align:center}
 
-/* history */
-.tl{position:relative;max-width:980px;margin:0 auto}
-.tl::before{content:"";position:absolute;left:150px;top:8px;bottom:8px;width:2px;background:var(--line)}
-.tr{display:grid;grid-template-columns:150px 1fr;position:relative;padding:0 0 46px}
-.tr:last-child{padding-bottom:0}
-.tr .y{font-family:var(--en);font-size:30px;font-weight:800;color:var(--navy);line-height:1}
-.tr .d{padding-left:46px;position:relative}
-.tr .d::before{content:"";position:absolute;left:-7px;top:6px;width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid var(--red)}
-.tr h4{font-size:19px;font-weight:700;color:var(--ink);line-height:1.5}
-.tr p{color:var(--body);font-size:15px;margin-top:4px}
+/* =========================================================
+   VENUE
+   ========================================================= */
+.venue{display:grid;grid-template-columns:1.3fr 1fr;border-radius:28px;overflow:hidden;box-shadow:var(--sh2);background:#fff}
+.venue figure{min-height:460px;position:relative}
+.venue figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.venue .vt{padding:56px 50px;display:flex;flex-direction:column;justify-content:center}
+.venue h3{font-size:30px;font-weight:900;line-height:1.3;letter-spacing:-.02em;margin-top:14px}
+.venue dl{margin-top:28px;display:grid;gap:14px}
+.venue dt{font-family:var(--en);font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--blue)}
+.venue dd{font-size:15.5px;margin-top:2px}
 
-/* contact */
-.ct{display:grid;grid-template-columns:1fr 1.2fr;gap:50px}
-.ct-info{background:var(--navy);color:#fff;border-radius:18px;padding:50px 46px;position:relative;overflow:hidden}
-.ct-info h3{font-size:26px;font-weight:800;margin-bottom:10px}
-.ct-info > p{color:#B9C6DA;margin-bottom:30px}
-.ci{list-style:none}
-.ci li{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:16px 0;border-top:1px solid rgba(255,255,255,.12);font-size:15.5px}
-.ci li > span{color:#FF8A9A;font-weight:700;font-size:14px}
-.ci a:hover{text-decoration:underline}
-form{background:#fff;border-radius:18px;padding:46px;box-shadow:0 10px 40px rgba(14,42,84,.08)}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.f{margin-bottom:18px}
-.f label{display:block;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:7px}
-.f input,.f select,.f textarea{width:100%;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:14px 16px;font-size:15px;font-family:inherit;color:var(--ink);transition:.2s}
-.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--navy2);background:#fff}
-.f textarea{min-height:140px;resize:vertical}
-form .btn{border:0;width:100%;justify-content:center}
-.note{display:none;margin-top:14px;font-size:14px;color:var(--navy);background:#EAF0F9;padding:12px 16px;border-radius:10px}
-.note.show{display:block}
+/* =========================================================
+   NEWS
+   ========================================================= */
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
+.nc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:.4s;display:flex;flex-direction:column}
+.nc:hover{transform:translateY(-8px);box-shadow:var(--sh2)}
+.nc .ph{height:210px;overflow:hidden}
+.nc .ph img{width:100%;height:100%;object-fit:cover;transition:.8s}
+.nc:hover .ph img{transform:scale(1.06)}
+.nc .bd{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
+.nc .src{display:flex;justify-content:space-between;font-size:13px}
+.nc .src b{color:var(--blue)}
+.nc .src span{color:var(--muted);font-family:var(--en)}
+.nc h3{font-size:18px;line-height:1.5;font-weight:800;margin-top:12px;flex:1}
+.nc p{font-size:14.5px;color:var(--muted);margin-top:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nc .more{margin-top:18px;font-weight:700;font-size:14px;color:var(--navy);display:flex;align-items:center;gap:6px}
 
-footer{background:#0A1C3A;color:#8C9AB3;padding:60px 0 30px;font-size:14px}
-.ft{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
-.ft img{height:44px;width:auto}
-.ft-info{line-height:2}
-.ft-info b{color:#fff;font-weight:600}
-.ft-links{display:flex;gap:22px;flex-wrap:wrap;margin-top:16px}
-.ft-links a:hover{color:#fff}
-.copy{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);font-size:13px}
-.totop{position:fixed;right:24px;bottom:24px;width:52px;height:52px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-family:var(--en);font-weight:700;font-size:12px;box-shadow:0 8px 24px rgba(187,25,50,.35);z-index:90;opacity:0;pointer-events:none;transition:.3s}
-.totop.show{opacity:1;pointer-events:auto}
+/* =========================================================
+   APPLY
+   ========================================================= */
+.apply{position:relative;overflow:hidden;color:#fff}
+.apply-bg{position:absolute;inset:0;background:center/cover}
+.apply:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(110deg,rgba(6,16,34,.96) 30%,rgba(11,27,51,.82))}
+.apply .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.15fr;gap:70px;align-items:center}
+.apply h2{font-size:clamp(30px,3.4vw,46px);font-weight:900;line-height:1.28;letter-spacing:-.03em;margin-top:16px}
+.apply p.d{color:rgba(255,255,255,.75);margin-top:20px;font-size:17px}
+.cbox{margin-top:40px;display:grid;gap:12px}
+.cbox>a,.cbox>div{display:flex;gap:16px;align-items:center;padding:18px 22px;border-radius:var(--r-s);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);transition:.3s;font-size:15px}
+.cbox a:hover{background:rgba(44,145,236,.2);border-color:var(--blue)}
+.cbox i{flex:0 0 40px;height:40px;border-radius:50%;background:var(--blue);display:grid;place-items:center}
+.cbox i svg{width:18px;height:18px}
+.cbox small{display:block;font-size:12px;color:rgba(255,255,255,.55)}
+form{background:#fff;color:var(--text);border-radius:26px;padding:40px;box-shadow:0 40px 90px rgba(0,0,0,.35)}
+form h3{font-size:22px;font-weight:800}
+form>p{font-size:14px;color:var(--muted);margin-top:4px;margin-bottom:24px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{margin-bottom:14px}
+.f label{display:block;font-size:13.5px;font-weight:700;margin-bottom:7px}
+.f label em{color:var(--red);font-style:normal}
+.f input,.f select,.f textarea{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;font-size:15px;font-family:inherit;background:var(--bg);transition:.2s}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px var(--blue-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{margin:0;display:flex;align-items:center;gap:7px;border:1.5px solid var(--line);border-radius:30px;padding:8px 14px;font-size:13.5px;font-weight:600;cursor:pointer;transition:.2s}
+.chips label:has(input:checked){border-color:var(--blue);background:var(--blue-soft);color:var(--blue-d)}
+.chips input{accent-color:var(--blue);width:auto!important;padding:0}
+form .btn{width:100%;justify-content:center;margin-top:10px}
+.fmsg{margin-top:12px;font-size:14px;font-weight:600;text-align:center;border-radius:10px;padding:0}
+.fmsg.ok{padding:12px;background:#EAF7EF;color:#17803D}
+.fmsg.err{padding:12px;background:#FDECEE;color:#C0392B}
+.note{font-size:12.5px;color:var(--muted);text-align:center;margin-top:12px}
 
-.rv{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform .9s ease}
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer{background:#060F1E;color:rgba(255,255,255,.6);padding:70px 0 34px;font-size:14px}
+.ft{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:50px}
+.ft .fl img{height:30px;width:auto}
+.ft .fl p{margin-top:18px;max-width:340px;line-height:1.75}
+.ft h5{color:#fff;font-size:14px;margin-bottom:14px;font-family:var(--en);letter-spacing:.12em}
+.ft li{list-style:none;padding:4px 0}
+.ft a:hover{color:#7CC0FF}
+.fk{display:inline-flex;flex-direction:column;align-items:center;gap:8px;background:#fff;border-radius:12px;padding:14px 18px;margin-top:22px}
+.fk img{height:26px!important}
+.fk span{color:var(--navy);font-size:12.5px;font-weight:800}
+.copy{border-top:1px solid rgba(255,255,255,.08);margin-top:50px;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px}
+
+.top-btn{position:fixed;right:28px;bottom:28px;z-index:90;width:52px;height:52px;border-radius:50%;background:var(--navy);color:#fff;border:0;cursor:pointer;box-shadow:var(--sh2);opacity:0;pointer-events:none;transition:.3s;font-size:20px}
+.top-btn.on{opacity:1;pointer-events:auto}
+.top-btn:hover{background:var(--blue)}
+
+.ach{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ach figure{position:relative;border-radius:var(--r-s);overflow:hidden;aspect-ratio:4/3;background:#0e2546}
+.ach img{width:100%;height:100%;object-fit:cover;transition:.8s}
+.ach figure:hover img{transform:scale(1.06)}
+.ach figcaption{position:absolute;inset:auto 0 0 0;padding:40px 16px 14px;background:linear-gradient(to top,rgba(6,16,34,.92),transparent);font-size:14px}
+@media (max-width:820px){.ach{grid-template-columns:repeat(2,1fr)}}
+/* reveal */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
-.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
 
-@media(max-width:1080px){
-  nav{position:fixed;top:84px;left:0;right:0;bottom:0;background:#fff;padding:20px 28px;display:none;overflow:auto}
-  nav.open{display:block}
-  nav ul{flex-direction:column;gap:0}
-  nav a{display:block;color:var(--ink)!important;font-size:19px;padding:16px 0;border-bottom:1px solid var(--line)}
-  .burger{display:block}
-  .greet,.ev,.ct{grid-template-columns:1fr;gap:44px}
-  .ev.rev .ev-img{order:0}
-  .greet-img .badge{left:16px;top:-22px}
-  .rg{grid-template-columns:1fr 1fr}
-  .rc.wide{grid-column:span 2}
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:1100px){
+  .gnb{position:fixed;top:var(--hh);left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:16px 20px 26px;gap:2px;box-shadow:0 20px 40px rgba(0,0,0,.12);transform:translateY(-130%);transition:.4s}
+  .gnb.open{transform:none}
+  .gnb>a{color:var(--text)!important;padding:14px 16px}
+  .gnb .cta{margin:10px 0 0;text-align:center}
+  .lang{margin:12px 0 0;border-color:var(--line);align-self:center}
+  .lang button{color:var(--muted)}
+  .lang button.on{background:var(--navy);color:#fff!important}
+  .ham{display:block}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .plogos{grid-template-columns:repeat(3,1fr)}
+  .ov,.pav-grid,.org,.apply .wrap,.venue{grid-template-columns:1fr}
+  .days{grid-template-columns:1fr}
+  .dtabs{flex-direction:row;overflow-x:auto}
+  .dtabs button{flex:1;min-width:150px}
+  .dpanel{grid-template-columns:1fr;padding:30px}
+  .dpanel figure{min-height:240px}
 }
-@media(max-width:720px){
-  section{padding:84px 0}
+@media (max-width:820px){
+  section{padding:90px 0}
+  .hero-bar .wrap{grid-template-columns:repeat(2,1fr)}
+  .hb{padding:20px 18px}
+  .hero{display:block;min-height:0}
+  .hero .wrap{padding-bottom:50px}
+  .hero-bar{position:relative}
+  .hb b{font-size:30px}
+  .scroll{display:none}
+  .collage{height:440px}
+  .meta,.news{grid-template-columns:1fr}
+  .gal{columns:2}
+  .wego-row{grid-template-columns:1fr;gap:34px;margin-top:70px}
+  .wego-row.rev .wi{order:0}
+  .ft{grid-template-columns:1fr}
+  .venue .vt{padding:36px 28px}
+}
+@media (max-width:560px){
   .wrap{padding:0 20px}
-  .nums .wrap{grid-template-columns:repeat(2,1fr)}
-  .num{border-left:0;border-top:1px solid rgba(255,255,255,.1);padding:30px 6px}
-  .num:last-child{grid-column:span 2}
-  .mv,.vals,.pg,.rg,.row{grid-template-columns:1fr}
-  .rc.wide{grid-column:auto;grid-template-columns:1fr}
-  .rc.wide p{padding:16px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.12)}
-  .base{grid-template-columns:1fr;padding:30px}
-  .mv-c,.val,form,.ct-info{padding:32px 26px}
-  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
-  .gal figure.w{grid-column:span 2}
-  .tl::before{left:6px}
-  .tr{grid-template-columns:1fr;padding-left:36px}
-  .tr .d{padding-left:0}
-  .tr .d::before{left:-37px;top:-24px}
-  .tr .y{margin-bottom:8px;font-size:24px}
-  .cap{display:none}
-  .hero h1{font-size:31px}
-  .hero .btns .btn{padding:14px 26px}
-  .logo,.logo img{height:38px}
+  .steps,.nums,.row{grid-template-columns:1fr}
+  .plogos{grid-template-columns:repeat(2,1fr)}
+  .gal{columns:1}
+  form{padding:28px 22px}
+  .tl:before{left:74px}.tl li{grid-template-columns:74px 1fr;gap:20px}.tl li:after{left:69px}
+  .lb{padding:60px 16px}
 }
-
-/* KCAI AI matching */
-#kcai{background:linear-gradient(180deg,#fff 0%,#F4F6FA 100%)}
-.kc-badge{display:inline-block;font-family:var(--en);font-weight:700;font-size:13px;letter-spacing:.08em;color:#fff;background:var(--navy);border-radius:30px;padding:6px 16px;margin-bottom:16px}
-.kc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
-.kc-step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px 26px 30px;position:relative;box-shadow:0 10px 30px rgba(14,42,84,.06)}
-.kc-step .n{font-family:var(--en);font-weight:800;font-size:15px;color:var(--red);letter-spacing:.1em}
-.kc-step h3{font-size:21px;color:var(--navy);margin:10px 0 10px;letter-spacing:-.02em;line-height:1.35}
-.kc-step p{font-size:15px;color:var(--body);line-height:1.7}
-.kc-step .free{position:absolute;top:22px;right:22px;background:var(--red);color:#fff;font-size:12px;font-weight:700;border-radius:20px;padding:3px 11px}
-.kc-band{margin-top:46px;display:grid;grid-template-columns:repeat(3,1fr);background:var(--navy);border-radius:20px;color:#fff;overflow:hidden}
-.kc-band div{padding:34px 20px;text-align:center;border-left:1px solid rgba(255,255,255,.1)}
-.kc-band div:first-child{border-left:0}
-.kc-band b{display:block;font-family:var(--en);font-size:clamp(28px,3vw,40px);font-weight:800;line-height:1.1}
-.kc-band b small{font-size:.6em;color:var(--red2)}
-.kc-band span{display:block;margin-top:8px;font-size:15px;color:#B9C6DA}
-.kc-cta{margin:0 0 46px;border:2px solid var(--red);box-shadow:0 14px 40px rgba(187,25,50,.10);display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:20px;padding:40px 44px}
-.kc-cta h3{font-size:24px;color:var(--navy);letter-spacing:-.02em;line-height:1.4}
-.kc-cta p{margin-top:10px;color:var(--body);font-size:16px}
-.kc-cta .acts{display:flex;flex-direction:column;gap:12px;align-items:stretch}
-.kc-cta .btn{justify-content:center}
-.kc-note{font-size:13px!important;color:var(--body);margin-top:2px!important;line-height:1.55}.kc-note a{color:var(--red);font-weight:600}
-.kc-cn{margin-top:22px;text-align:center;font-size:15px;color:var(--muted)}
-.kc-cn a{color:var(--red);font-weight:700}
-@media(max-width:1000px){.kc-steps{grid-template-columns:repeat(2,1fr)}.kc-cta{grid-template-columns:1fr;padding:32px 26px}}
-@media(max-width:600px){.kc-steps{grid-template-columns:1fr}.kc-band{grid-template-columns:1fr}.kc-band div{border-left:0;border-top:1px solid rgba(255,255,255,.1)}.kc-band div:first-child{border-top:0}}
 </style>
 </head>
 <body>
 
-<header id="hd">
-  <div class="wrap hd">
-    <a href="#home" class="logo" aria-label="한중과학기술서비스협회">
-      <img class="light" src="img02.png" alt="한중과학기술서비스협회 KCSTSA">
-      <img class="dark" src="img03.png" alt="한중과학기술서비스협회 KCSTSA">
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+<header id="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="CKMDM">
+      <img class="w" data-img="logo" alt="CKMDM">
+      <img class="c" data-img="logo-color" alt="CKMDM">
     </a>
-    <nav id="nav">
-      <ul>
-        <li><a href="#greeting"><span class="ko">협회소개</span><span class="zh">关于协会</span></a></li>
-        <li><a href="#programs"><span class="ko">사업분야</span><span class="zh">业务领域</span></a></li>
-        <li><a href="#kcai"><span class="ko">AI 매칭</span><span class="zh">AI对接</span></a></li>
-        <li><a href="#events"><span class="ko">대표행사</span><span class="zh">品牌活动</span></a></li>
-        <li><a href="#results"><span class="ko">주요성과</span><span class="zh">合作成果</span></a></li>
-        <li><a href="#history"><span class="ko">연혁</span><span class="zh">发展历程</span></a></li>
-        <li><a href="#contact"><span class="ko">협력문의</span><span class="zh">合作咨询</span></a></li>
-      </ul>
+    <nav class="gnb" id="gnb">
+      <a href="#about"><span class="ko">CKMDM</span><span class="zh">关于CKMDM</span></a>
+      <a href="#program"><span class="ko">진출 프로그램</span><span class="zh">进入项目</span></a>
+      <a href="#pavilion"><span class="ko">한국관</span><span class="zh">韩国馆</span></a>
+      <a href="#recap"><span class="ko">2026 매칭회</span><span class="zh">2026对接会</span></a>
+      <a href="#gallery"><span class="ko">갤러리</span><span class="zh">图片集</span></a>
+      <a href="#wego">WEGO</a>
+      <a href="#news"><span class="ko">언론보도</span><span class="zh">媒体报道</span></a>
+      <a href="#nmpa"><span class="ko">NMPA 진단</span><span class="zh">NMPA自测</span></a>
+      <a href="#apply" class="cta"><span class="ko">참가 상담</span><span class="zh">参加咨询</span></a>
+      <div class="lang"><button data-l="ko" class="on">KOR</button><button data-l="zh">中文</button></div>
     </nav>
-    <div class="hd-r">
-      <div class="lang"><button id="bKo" class="sel" type="button">KOR</button><button id="bZh" type="button">中文</button></div>
-      <button class="burger" id="burger" type="button" aria-label="메뉴"><i></i><i></i><i></i></button>
-    </div>
+    <button class="ham" id="ham" aria-label="menu"><i></i><i></i><i></i></button>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="home" style="padding:0">
-  <div class="slide act"><img src="img04.jpg" alt=""></div>
-  <div class="slide"><img src="img05.jpg" alt=""></div>
-  <div class="slide"><img src="img06.jpg" alt=""></div>
-  <div class="hero-in">
-    <div class="en">KCSTSA</div>
-    <h1><span class="ko">한중과학기술서비스협회</span><span class="zh">韩中科学技术服务协会</span></h1>
-    <p class="lead"><span class="ko">한·중 과학기술과 비즈니스 교류를 촉진하고,<br>양국 기업과 기관의 투자·기술협력·시장진출을 실질적 성과로 연결합니다.</span><span class="zh">促进中韩科技与商务交流，<br>将两国企业与机构的投资、技术合作与市场拓展转化为实际成果。</span></p>
-    <div class="btns">
-      <a href="https://app.formasty.com/f/pub_d22a5727009e46208de75fc083d6f1c1" target="_blank" rel="noopener" class="btn btn-red"><span class="ko">무료 AI 진단 신청</span><span class="zh">免费 AI 诊断（韩国企业）</span></a>
-      <a href="#kcai" class="btn btn-line"><span class="ko">AI 매칭 알아보기</span><span class="zh">了解 AI 对接</span></a>
-      <a href="#contact" class="btn btn-line"><span class="ko">협력 문의하기</span><span class="zh">合作咨询</span></a>
-    </div>
-  </div>
-  <div class="dots" id="dots"><button class="act" aria-label="1"></button><button aria-label="2"></button><button aria-label="3"></button></div>
-  <div class="cap" id="cap"></div>
-  <div class="scroll">SCROLL<i></i></div>
-</section>
-
-<!-- NUMBERS -->
-<section class="nums">
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+<section class="hero" id="top">
+  <div class="hero-bg" data-bg="ck-stage"></div>
   <div class="wrap">
-    <div class="num"><b data-n="1000">1,000<small>+</small></b><span class="ko">중·한 기업 파트너</span><span class="zh">中韩企业伙伴</span></div>
-    <div class="num"><b data-n="200">200<small>+</small></b><span class="ko">투자 파트너 (AC·VC·PE·신기사)</span><span class="zh">投资伙伴 (AC·VC·PE)</span></div>
-    <div class="num"><b data-n="60">60<small>+</small></b><span class="ko">정부·공공기관</span><span class="zh">政府及公共机构</span></div>
-    <div class="num"><b data-n="20">20<small>+</small></b><span class="ko">대학·연구기관</span><span class="zh">高校及科研机构</span></div>
-    <div class="num"><b data-n="100">100<small>+</small></b><span class="ko">중국 언론 네트워크</span><span class="zh">中国媒体网络</span></div>
+    <div class="badge rv"><b>2027</b><span class="ko">CKMDM 의료기기 중국진출 프로그램 · 참가기업 상시 모집</span><span class="zh">CKMDM医疗器械进入中国项目 · 常年招募参会企业</span></div>
+    <h1 class="rv d1">
+      <span class="ko">한국 의료기기의 중국 진출,<br><em>매칭에서 생산·유통·투자까지</em></span>
+      <span class="zh">韩国医疗器械进入中国，<br><em>从对接到生产·流通·投资</em></span>
+    </h1>
+    <p class="lead rv d2">
+      <span class="ko">웨이하이시 상무국 · 위고그룹(WEGO) · 한중과학기술서비스협회가 함께하는 공식 한·중 의료산업 협력 플랫폼. 비즈니스 매칭에서 끝나지 않고, 위고 산업단지 입주와 현지생산, 공급·유통, 투자 연계까지 협회가 끝까지 설계하고 동행합니다.</span>
+      <span class="zh">由威海市商务局 · 威高集团（WEGO）· 中韩科学技术服务协会共同打造的中韩医疗产业官方合作平台。不止于商务对接，协会将全程设计并陪同企业完成入驻威高产业园、本地化生产、供应流通与投资对接。</span>
+    </p>
+    <div class="btns rv d3">
+      <a href="#nmpa" class="btn btn-r"><span class="ko">무료 AI 진단 신청</span><span class="zh">免费AI诊断</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="#apply" class="btn btn-w"><span class="ko">참가 상담 신청</span><span class="zh">申请参加咨询</span></a>
+      <a href="#recap" class="btn btn-w"><span class="ko">2026 매칭회 다시보기</span><span class="zh">回顾2026对接会</span></a>
+    </div>
+  </div>
+  <div class="hero-bar">
+    <div class="wrap">
+      <div class="hb"><b class="cnt" data-n="33">0</b><span class="ko">한국 참가기업</span><span class="zh">韩国参会企业</span></div>
+      <div class="hb"><b class="cnt" data-n="49">0</b><span class="ko">1:1 상담 중국 기업</span><span class="zh">一对一洽谈中国企业</span></div>
+      <div class="hb"><b><span class="cnt" data-n="170">0</span><small>+</small></b><span class="ko">중국 측 참석자</span><span class="zh">中方参会人员</span></div>
+      <div class="hb"><b><span class="cnt" data-n="1000">0</span><small>+</small></b><span class="ko">협회 중·한 기업 파트너</span><span class="zh">协会中韩企业伙伴</span></div>
+    </div>
+  </div>
+  <div class="scroll">SCROLL</div>
+</section>
+
+<!-- =====================================================
+     OVERVIEW
+     ===================================================== -->
+<section id="about">
+  <div class="wrap ov">
+    <div>
+      <span class="kicker rv">About CKMDM</span>
+      <h2 class="h2 rv d1"><span class="ko">한 번의 행사가 아닌,<br><b>중국 진출 전 과정</b>의 플랫폼</span><span class="zh">不是一次性活动，<br>而是<b>进入中国全过程</b>的平台</span></h2>
+      <p class="desc rv d2"><span class="ko">CKMDM(China–Korea Medical Device Matching)은 중국 시장 진출을 추진하는 한국 의료기기 기업을 위한 산업협력 플랫폼입니다. 2026년 웨이하이 매칭회의 성과를 바탕으로, 현지 파트너 발굴부터 생산·유통·투자까지 실질적인 사업 확장을 지원합니다.</span><span class="zh">CKMDM（China–Korea Medical Device Matching）是面向拟进入中国市场的韩国医疗器械企业的产业合作平台。以2026年威海对接会成果为基础，从发掘本地合作伙伴到生产·流通·投资，切实支持企业拓展业务。</span></p>
+      <div class="ov-points">
+        <div class="rv"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></i><div><b class="ko">정부 공식 협력</b><b class="zh">政府官方合作</b><span class="ko">웨이하이시 상무국 주최 · 위고그룹 공동주관</span><span class="zh">威海市商务局主办 · 威高集团联合承办</span></div></div>
+        <div class="rv d1"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></i><div><b class="ko">검증된 중국 파트너</b><b class="zh">经过验证的中国伙伴</b><span class="ko">사전 매칭된 중국 기업·기관과 1:1 상담</span><span class="zh">与预先匹配的中国企业·机构一对一洽谈</span></div></div>
+        <div class="rv d2"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></i><div><b class="ko">끝까지 동행하는 실행</b><b class="zh">全程陪同落地执行</b><span class="ko">입주·인허가·생산·유통·투자 단계별 지원</span><span class="zh">入驻·注册·生产·流通·投资分阶段支持</span></div></div>
+      </div>
+    </div>
+    <div class="collage rv d1">
+      <figure class="c1"><img data-img="news-1" alt="2026 CKMDM 단체사진"></figure>
+      <figure class="c2"><img data-img="program-2" alt="1:1 비즈니스 상담"></figure>
+      <figure class="c3"><img data-img="program-3" alt="IR 발표"></figure>
+      <div class="tag"><b>2026</b><span class="ko">제1회 웨이하이 매칭회 개최</span><span class="zh">首届威海对接会成功举办</span></div>
+    </div>
   </div>
 </section>
 
-<!-- GREETING -->
-<section id="greeting">
-  <div class="wrap greet">
-    <div class="greet-img rv">
-      <img src="img07.jpg" alt="한·중 협력 행사 단체사진" style="object-position:50% 92%">
-      <div class="badge">100% − 1% = 0%<small><span class="ko">협회의 업무 원칙</span><span class="zh">协会工作原则</span></small></div>
-    </div>
-    <div class="greet-txt rv d1">
-      <div class="st left" style="margin-bottom:24px"><span class="en">Greeting</span><h2><span class="ko">인사말</span><span class="zh">协会致辞</span></h2></div>
-      <div class="ko">
-        <h3>신뢰를 기반으로 한·중을 잇고,<br><em>성과로 신뢰를 증명</em>하겠습니다.</h3>
-        <p>한중과학기술서비스협회 홈페이지를 찾아 주신 여러분께 감사드립니다.</p>
-        <p>한중과학기술서비스협회(KCSTSA)는 중국 산둥성 웨이하이에 본부를 두고, 한·중 기업과 기관이 투자, 기술협력, 시장진출에서 실질적인 성과를 거둘 수 있도록 지원하는 협력 플랫폼입니다.</p>
-        <p>우리 협회는 중국 정부와 산업단지, 투자기관, 대학과 쌓아 온 신뢰를 바탕으로 사업화, 인증, 투자유치, 현지 진출의 전 과정을 함께 설계하고 끝까지 책임지겠습니다. 단 1%의 소홀함도 전체의 신뢰를 무너뜨린다는 마음으로 모든 협력을 정석대로, 성실하게 수행하겠습니다.</p>
-        <p>한·중 과학기술 협력의 새로운 기준을 만들어 가는 길에 여러분의 관심과 동행을 부탁드립니다.</p>
-        <div class="sign">한중과학기술서비스협회 임직원 일동</div>
-      </div>
-      <div class="zh">
-        <h3>以信任连接中韩，<br><em>以成果证明信任</em>。</h3>
-        <p>衷心感谢您访问韩中科学技术服务协会官方网站。</p>
-        <p>韩中科学技术服务协会（KCSTSA）总部位于中国山东省威海市，是帮助中韩企业与机构在投资、技术合作和市场拓展中取得实际成果的合作平台。</p>
-        <p>我们将依托与中国政府、产业园区、投资机构及高校积累的信任，与合作方共同设计产业化、认证、招商引资及落地发展的全过程，并负责到底。我们以"哪怕1%的疏忽也会让全部信任归零"的态度，规范、诚信地对待每一项合作。</p>
-        <p>诚挚期待您与我们携手，共同树立中韩科技合作的新标准。</p>
-        <div class="sign">韩中科学技术服务协会 全体员工</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="bg">
+<!-- =====================================================
+     PROGRAM
+     ===================================================== -->
+<section id="program" class="bg">
   <div class="wrap">
-    <div class="st rv"><span class="en">About KCSTSA</span><h2><span class="ko">미션 · 비전</span><span class="zh">使命 · 愿景</span></h2><p><span class="ko">인맥이나 형식적 교류가 아니라, 역량과 성과로 증명하는 협력을 지향합니다.</span><span class="zh">我们追求的不是人脉或形式交流，而是以能力和成果证明的合作。</span></p></div>
-    <div class="mv">
-      <div class="mv-c rv"><span class="en">MISSION</span><h3><span class="ko">한·중 협력을 실질적 성과로<br>연결하는 실행형 플랫폼</span><span class="zh">将中韩合作转化为<br>实际成果的实干型平台</span></h3><p><span class="ko">중국 정부·기관·기업 네트워크와 투자·기술·산업 협력 경험을 바탕으로 투자유치, 시장진출, 기술협력, 사업화, 인증, 정책 연계까지 전 주기를 지원합니다.</span><span class="zh">依托中国政府、机构及企业网络与投资、技术、产业合作经验，提供涵盖招商引资、市场准入、技术合作、产业化、认证及政策对接的全周期支持。</span></p><div class="big">M</div></div>
-      <div class="mv-c rv d1"><span class="en">VISION</span><h3><span class="ko">성과로 신뢰를 증명하는<br>한·중 과학기술·산업 협력 플랫폼</span><span class="zh">以成果证明信任的<br>中韩科技与产业合作平台</span></h3><p><span class="ko">과학기술, 의료·바이오, 첨단산업, 투자 분야에서 한·중 산업협력의 새로운 기준을 세우고 지속 가능한 협력 생태계를 선도합니다.</span><span class="zh">在科技、医疗生物、高端产业及投资领域树立中韩产业合作新标准，引领可持续的合作生态。</span></p><div class="big">V</div></div>
+    <div class="center">
+      <span class="kicker c rv">Global Business Program</span>
+      <h2 class="h2 rv d1"><span class="ko">중국 진출 <b>4단계 로드맵</b></span><span class="zh">进入中国市场<b>四步路线图</b></span></h2>
+      <p class="desc rv d2"><span class="ko">매칭에서 시작해 현지 생산, 판매, 자금까지 단계별로 이어지도록 한중과학기술서비스협회가 직접 설계하고 동행합니다.</span><span class="zh">从对接开始，延伸至本地生产、销售与资金，由中韩科学技术服务协会亲自设计并全程陪同。</span></p>
     </div>
-    <div class="vals">
-      <div class="val rv"><div class="ic">信</div><div><h4><span class="ko">신뢰</span><span class="zh">信任</span></h4><p><span class="ko">약속한 것은 끝까지 지킵니다.</span><span class="zh">言出必行，守信到底。</span></p></div></div>
-      <div class="val rv d1"><div class="ic">行</div><div><h4><span class="ko">실행</span><span class="zh">实干</span></h4><p><span class="ko">교류에서 멈추지 않고 계약·법인·투자까지 실행합니다.</span><span class="zh">不止于交流，落实到签约、法人与投资。</span></p></div></div>
-      <div class="val rv d2"><div class="ic">果</div><div><h4><span class="ko">성과</span><span class="zh">成果</span></h4><p><span class="ko">숫자로 확인되는 결과로 증명합니다.</span><span class="zh">以可量化的结果证明价值。</span></p></div></div>
+    <div class="steps">
+      <article class="st rv">
+        <div class="ph"><img data-img="program-2" alt=""><span class="no">STEP 01</span></div>
+        <div class="bd">
+          <h3><span class="ko">비즈니스 매칭</span><span class="zh">商务对接</span></h3>
+          <p><span class="ko">웨이하이 매칭회와 클러스터 방문으로 검증된 중국 파트너를 만납니다.</span><span class="zh">通过威海对接会与产业集群考察，对接经过验证的中国合作伙伴。</span></p>
+          <ul class="ko"><li>1:1 맞춤형 비즈니스 상담</li><li>한·중 기업 IR 로드쇼</li><li>전시 부스 · 제품 시연</li></ul>
+          <ul class="zh"><li>一对一定制商务洽谈</li><li>中韩企业IR路演</li><li>展位 · 产品演示</li></ul>
+        </div>
+      </article>
+      <article class="st rv d1">
+        <div class="ph"><img data-img="wego-innovation" alt=""><span class="no">STEP 02</span></div>
+        <div class="bd">
+          <h3><span class="ko">입주 · 현지생산</span><span class="zh">入驻 · 本地生产</span></h3>
+          <p><span class="ko">위고 산업단지 「한국관」 입주로 중국 현지 생산 기반을 마련합니다.</span><span class="zh">入驻威高产业园「韩国馆」，建立中国本地生产基础。</span></p>
+          <ul class="ko"><li>산업단지 입주 지원</li><li>현지생산 · 위탁생산</li><li>인증·허가(NMPA) 컨설팅</li></ul>
+          <ul class="zh"><li>产业园入驻支持</li><li>本地生产 · 委托生产</li><li>认证·注册（NMPA）咨询</li></ul>
+        </div>
+      </article>
+      <article class="st rv d2">
+        <div class="ph contain"><img data-img="wego-main" alt=""><span class="no">STEP 03</span></div>
+        <div class="bd">
+          <h3><span class="ko">공급 · 유통</span><span class="zh">供应 · 流通</span></h3>
+          <p><span class="ko">위고그룹의 공급·총판 채널과 연결해 중국 및 해외 100여 개국 시장으로 판매합니다.</span><span class="zh">对接威高集团供应与总代理渠道，销往中国及全球100多个国家市场。</span></p>
+          <ul class="ko"><li>위고 공급 · 총판 연계</li><li>병원 · 유통 채널</li><li>글로벌 수출망 활용</li></ul>
+          <ul class="zh"><li>对接威高供应 · 总代理</li><li>医院 · 流通渠道</li><li>利用全球出口网络</li></ul>
+        </div>
+      </article>
+      <article class="st rv d3">
+        <div class="ph"><img data-img="program-3" alt=""><span class="no">STEP 04</span></div>
+        <div class="bd">
+          <h3><span class="ko">투자 연계</span><span class="zh">投资对接</span></h3>
+          <p><span class="ko">수앤그룹 등 한·중 투자 파트너 200+와 함께 성장 자금까지 연결합니다.</span><span class="zh">携手SU&amp;Partners等200+中韩投资伙伴，对接成长资金。</span></p>
+          <ul class="ko"><li>글로벌 의료기기 펀드 연계</li><li>AC · VC · PE · 신기사 네트워크</li><li>합작 · JV 구조 설계</li></ul>
+          <ul class="zh"><li>对接全球医疗器械基金</li><li>AC · VC · PE · 新技术金融网络</li><li>合资 · JV结构设计</li></ul>
+        </div>
+      </article>
     </div>
-    <div class="base rv">
-      <h4><span class="ko">산둥성 핵심 거점</span><span class="zh">山东省核心据点</span></h4>
-      <div class="cities"><span><span class="ko">지난</span><span class="zh">济南</span></span><span><span class="ko">칭다오</span><span class="zh">青岛</span></span><span><span class="ko">웨이팡</span><span class="zh">潍坊</span></span><span><span class="ko">옌타이</span><span class="zh">烟台</span></span><span><span class="ko">웨이하이</span><span class="zh">威海</span></span></div>
-      <h4><span class="ko">중국 전역 네트워크</span><span class="zh">全国网络</span></h4>
-      <div class="cities"><span><span class="ko">베이징</span><span class="zh">北京</span></span><span><span class="ko">상하이</span><span class="zh">上海</span></span><span><span class="ko">광저우</span><span class="zh">广州</span></span><span><span class="ko">선전</span><span class="zh">深圳</span></span><span><span class="ko">하얼빈</span><span class="zh">哈尔滨</span></span><span><span class="ko">닝보</span><span class="zh">宁波</span></span><span><span class="ko">옌청</span><span class="zh">盐城</span></span></div>
+    <div class="flow rv">
+      <span class="ko">매칭</span><span class="zh">对接</span><i></i>
+      <span class="ko">입주·생산</span><span class="zh">入驻·生产</span><i></i>
+      <span class="ko">공급·유통</span><span class="zh">供应·流通</span><i></i>
+      <span class="ko">투자·성장</span><span class="zh">投资·成长</span>
     </div>
   </div>
 </section>
 
-<!-- PROGRAMS -->
-<section id="programs">
+<!-- =====================================================
+     KOREA PAVILION
+     ===================================================== -->
+<section id="pavilion" class="dark pav">
+  <div class="pav-bg" data-bg="wego-network"></div>
+  <div class="wrap pav-grid">
+    <div>
+      <span class="kicker rv">Korea Pavilion</span>
+      <h2 class="h2 rv d1"><span class="ko">위고 산업단지<br>「한국관」</span><span class="zh">威高产业园<br>「韩国馆」</span></h2>
+      <p class="desc rv d2"><span class="ko">한중과학기술서비스협회가 지원하는 한국 의료기기 기업 전용 거점입니다. 개별 기업이 혼자 풀기 어려운 입주·생산·판매 문제를 한국관 안에서 함께 해결합니다.</span><span class="zh">由中韩科学技术服务协会支持的韩国医疗器械企业专属基地。在韩国馆内共同解决单个企业难以独立应对的入驻、生产与销售问题。</span></p>
+      <ul class="chk">
+        <li class="rv"><i>01</i><div><b class="ko">협회 원스톱 지원</b><b class="zh">协会一站式支持</b><span class="ko">입주 절차 · 법인 설립 · 인허가 · 통역·행정까지 협회가 동행</span><span class="zh">入驻手续 · 法人设立 · 注册审批 · 翻译与行政，协会全程陪同</span></div></li>
+        <li class="rv d1"><i>02</i><div><b class="ko">위고그룹 생산·공급 생태계</b><b class="zh">威高集团生产·供应生态</b><span class="ko">중국 대표 의료기기 그룹의 생산 인프라와 공급망에 직접 연결</span><span class="zh">直接对接中国代表性医疗器械集团的生产设施与供应链</span></div></li>
+        <li class="rv d2"><i>03</i><div><b class="ko">「Korea Pavilion」 공동 브랜드</b><b class="zh">「Korea Pavilion」共同品牌</b><span class="ko">한국 기업 공동 브랜드로 중국 바이어 · 병원에 상시 노출</span><span class="zh">以韩国企业共同品牌常年面向中国采购商与医院</span></div></li>
+      </ul>
+    </div>
+    <div class="pav-card rv d1">
+      <div class="top"><img data-img="wego-network" alt="WEGO"><p>KOREA PAVILION · WEGO INDUSTRIAL PARK</p></div>
+      <div class="zones">
+        <div class="w"><b class="ko">한중과학기술서비스협회 지원센터</b><b class="zh">中韩科学技术服务协会支持中心</b><span class="ko">입주 · 인허가 · 행정 · 투자 연계</span><span class="zh">入驻 · 注册 · 行政 · 投资对接</span></div>
+        <div><b class="ko">생산 존</b><b class="zh">生产区</b><span class="ko">현지생산 · 위탁생산</span><span class="zh">本地生产 · 委托生产</span></div>
+        <div><b class="ko">쇼룸 존</b><b class="zh">展厅区</b><span class="ko">제품 상설 전시 · 시연</span><span class="zh">产品常设展示 · 演示</span></div>
+        <div><b class="ko">R&amp;D 존</b><b class="zh">研发区</b><span class="ko">공동연구 · 현지화 개발</span><span class="zh">联合研究 · 本地化开发</span></div>
+        <div><b class="ko">유통 존</b><b class="zh">流通区</b><span class="ko">위고 공급 · 총판 연계</span><span class="zh">对接威高供应 · 总代理</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     2026 RECAP
+     ===================================================== -->
+<section id="recap" class="bg">
   <div class="wrap">
-    <div class="st rv"><span class="en">Business Areas</span><h2><span class="ko">4대 사업분야</span><span class="zh">四大业务领域</span></h2><p><span class="ko">기업의 단계와 목적에 맞춰 진출 전략부터 현지 실행까지 원스톱으로 지원합니다.</span><span class="zh">根据企业阶段与目标，提供从进入战略到本地落地的一站式支持。</span></p></div>
-    <div class="pg">
-      <div class="card rv">
-        <div class="ph"><img src="img08.jpg" alt="" style="object-position:center 58%"><span class="no">01</span><span class="key"><span class="ko">핵심사업</span><span class="zh">重点业务</span></span></div>
-        <div class="bd"><h3><span class="ko">의료기기·바이오 중국진출</span><span class="zh">医疗器械·生物进入中国</span></h3>
-        <p><span class="ko">CKMDM과 한중(웨이하이) 의료산업 융합발전대회의 실적을 바탕으로, 한국 의료기기·바이오 기업의 중국 진출을 처음부터 끝까지 설계합니다.</span><span class="zh">依托CKMDM与中韩（威海）医疗产业融合发展大会的实绩，全程设计韩国医疗器械及生物企业进入中国的路径。</span></p>
-        <div class="tags"><span class="ko">산업단지 입주</span><span class="zh">入驻产业园</span><span class="ko">현지 생산</span><span class="zh">本地生产</span><span>NMPA</span><span class="ko">유통 채널</span><span class="zh">分销渠道</span><span class="ko">투자 매칭</span><span class="zh">投资对接</span></div></div>
+    <div class="recap-top">
+      <div>
+        <span class="kicker rv">2026 Event Archive</span>
+        <h2 class="h2 rv d1"><span class="ko">2026 한·중(웨이하이)<br><b>의료기기 산업협력 기회 매칭회</b></span><span class="zh">2026中韩（威海）<br><b>医疗器械产业合作机会对接会</b></span></h2>
       </div>
-      <div class="card rv d1">
-        <div class="ph"><img src="img09.jpg" alt="" style="object-position:center 55%"><span class="no">02</span></div>
-        <div class="bd"><h3><span class="ko">한·중 투자유치 · 펀드 연계</span><span class="zh">中韩招商引资 · 基金对接</span></h3>
-        <p><span class="ko">AC·VC·PE·신기사 200곳 이상의 투자 파트너와 정기 IR을 통해 한국 기업의 중국 투자유치와 중국 자본의 한국 투자를 양방향으로 연결합니다.</span><span class="zh">与200余家投资伙伴开展定期路演，双向连接韩国企业引进中国资本与中国资本投资韩国。</span></p>
-        <div class="tags"><span>IR</span><span class="ko">투자설명회</span><span class="zh">投资说明会</span><span class="ko">양방향 매칭</span><span class="zh">双向对接</span></div></div>
-      </div>
-      <div class="card rv">
-        <div class="ph"><img src="img10.jpg" alt="" style="object-position:center 42%"><span class="no">03</span></div>
-        <div class="bd"><h3><span class="ko">과학기술 교류 · 인재 협력</span><span class="zh">科技交流 · 人才合作</span></h3>
-        <p><span class="ko">한·중 대학과 연구기관의 공동연구, 산둥성 인재정책(태산인재공정) 연계로 연구성과가 기업의 제품과 시장으로 이어지도록 설계합니다.</span><span class="zh">通过中韩高校与科研机构联合研究、对接山东省人才政策（泰山人才工程），让研究成果走向企业产品与市场。</span></p>
-        <div class="tags"><span class="ko">공동연구</span><span class="zh">联合研究</span><span class="ko">태산인재공정</span><span class="zh">泰山人才工程</span><span class="ko">산학협력</span><span class="zh">产学合作</span></div></div>
-      </div>
-      <div class="card rv d1">
-        <div class="ph"><img src="img11.jpg" alt="" style="object-position:center 45%"><span class="no">04</span></div>
-        <div class="bd"><h3><span class="ko">한·중 상호진출 통합지원</span><span class="zh">中韩双向进入综合支持</span></h3>
-        <p><span class="ko">법인 설립, 브랜드 수권, 판매 채널, 홍보, 물류까지 한 창구에서 지원하고, 중국 언론 100곳 이상의 네트워크로 현지 인지도를 함께 높입니다.</span><span class="zh">设立法人、品牌授权、销售渠道、宣传与物流一站式办理，并借助100余家中国媒体网络提升本地知名度。</span></p>
-        <div class="tags"><span class="ko">법인 설립</span><span class="zh">设立法人</span><span class="ko">브랜드 수권</span><span class="zh">品牌授权</span><span class="ko">판매 채널</span><span class="zh">销售渠道</span><span class="ko">언론 홍보</span><span class="zh">媒体宣传</span></div></div>
-      </div>
+      <p class="desc rv d2" style="max-width:500px"><span class="ko">한국 의료기기 기업 33개사가 웨이하이에서 중국 기업 49개사와 1:1 상담을 진행하며 중국 진출 가능성을 확인했습니다. 한중과학기술서비스협회가 총괄 기획·운영했습니다.</span><span class="zh">33家韩国医疗器械企业在威海与49家中国企业进行一对一洽谈，确认了进入中国市场的可能性。由中韩科学技术服务协会全面策划和运营。</span></p>
     </div>
-  </div>
-</section>
-
-
-<!-- KCAI AI MATCHING -->
-<section id="kcai">
-  <div class="wrap">
-    <div class="st rv"><span class="en">AI Matching Platform</span><div class="kc-badge">KCAI_코드01</div><h2><span class="ko">한·중 기업·투자 AI 매칭</span><span class="zh">中韩企业·投资 AI 对接平台</span></h2><p><span class="ko">AI가 분석하고, 협회가 끝까지 연결합니다.</span><span class="zh">AI 精准分析，协会全程对接到底。</span></p></div>
-    <div class="kc-cta rv">
-      <div><h3><span class="ko">진단은 무료입니다.<br>비용은 진단 후 맞춤으로 안내드립니다.</span><span class="zh">诊断完全免费，<br>费用将在诊断后为您定制说明。</span></h3>
-      <p><span class="ko">진단 결과를 바탕으로 기업 상황에 맞는 지원 방식과 비용을 협회 담당자가 따로 안내드립니다.</span><span class="zh">协会负责人将根据诊断结果，为您说明适合企业情况的支持方式与费用。</span></p></div>
-      <div class="acts"><a class="btn btn-red" href="https://app.formasty.com/f/pub_d22a5727009e46208de75fc083d6f1c1" target="_blank" rel="noopener"><span class="ko">무료 AI 진단 신청</span><span class="zh">申请免费 AI 诊断（韩国企业）</span></a><a class="btn btn-navy" href="#contact"><span class="ko">협력 문의하기</span><span class="zh">合作咨询</span></a><p class="kc-note"><span class="ko">※ 신청 화면이 열리지 않으면 브라우저 번역을 끄거나(원본 보기) <a href="mailto:kcstsa@nate.com">kcstsa@nate.com</a> 으로 회사소개서를 보내 주세요.</span><span class="zh">※ 若申请页面无法打开，请关闭浏览器翻译（查看原文），或将公司介绍发送至 <a href="mailto:kcstsa@nate.com">kcstsa@nate.com</a>。</span></p></div>
-    </div>
-    <div class="kc-steps">
-      <div class="kc-step rv"><span class="free"><span class="ko">무료</span><span class="zh">免费</span></span><span class="n">STEP 01</span><h3><span class="ko">AI 진단</span><span class="zh">AI 诊断</span></h3><p><span class="ko">기업 정보를 등록하면 AI가 중국 진출 적합도와 추천 진출 경로를 분석해 진단 리포트로 드립니다.</span><span class="zh">企业登记信息后，AI 分析进入中国的匹配度与推荐路径，并提供诊断报告。</span></p></div>
-      <div class="kc-step rv d1"><span class="n">STEP 02</span><h3><span class="ko">맞춤 매칭 추천</span><span class="zh">定制对接推荐</span></h3><p><span class="ko">협회 네트워크의 중국 기업·기관·투자사 가운데 가장 잘 맞는 상대를 찾아 추천합니다.</span><span class="zh">从协会网络中的中国企业、机构与投资方中，推荐最匹配的合作伙伴。</span></p></div>
-      <div class="kc-step rv"><span class="n">STEP 03</span><h3><span class="ko">미팅 주선</span><span class="zh">安排会谈</span></h3><p><span class="ko">온라인 또는 중국 현지 미팅을 마련하고, 통역과 현지 동행까지 지원합니다.</span><span class="zh">安排线上或中国当地会谈，并提供翻译与现场陪同。</span></p></div>
-      <div class="kc-step rv d1"><span class="n">STEP 04</span><h3><span class="ko">계약·투자 성사</span><span class="zh">签约·投资落地</span></h3><p><span class="ko">공급·합작·현지 생산·투자 계약까지 협상을 함께하고, 이후 사업이 자리 잡을 때까지 관리합니다.</span><span class="zh">共同推进供应、合资、本地生产及投资签约，并持续跟进直至项目落地。</span></p></div>
-    </div>
-    <div class="kc-band rv">
-      <div><b>14,000<small>+</small></b><span class="ko">중국 기업 데이터</span><span class="zh">中国企业数据</span></div>
-      <div><b>200<small>+</small></b><span class="ko">투자 파트너 (AC·VC·PE·신기사)</span><span class="zh">投资伙伴 (AC·VC·PE)</span></div>
-      <div><b>1,000<small>+</small></b><span class="ko">중·한 기업 파트너</span><span class="zh">中韩企业伙伴</span></div>
-    </div>
-    <p class="kc-cn"><span class="ko">한국 기술·기업을 찾는 중국 기관·기업은 <a href="#contact">협력 문의</a>로 연락해 주십시오.</span><span class="zh">寻找韩国技术与企业的中方机构及企业，请通过<a href="#contact">合作咨询</a>与我们联系。</span></p>
-  </div>
-</section>
-
-<!-- EVENTS -->
-<section id="events" class="bg">
-  <div class="wrap">
-    <div class="st rv"><span class="en">Core Project</span><h2><span class="ko">대표 행사</span><span class="zh">品牌活动</span></h2><p><span class="ko">협회가 주관하는 한·중 협력의 대표 플랫폼입니다.</span><span class="zh">协会主办的中韩合作代表性平台。</span></p></div>
-
-    <div class="ev">
-      <div class="ev-img rv"><img src="img12.jpg" alt="제9회 한중혁신대회 발대식" style="object-position:center 40%"><span class="tagl"><span class="ko">제9회 한중혁신대회 발대식</span><span class="zh">第九届中韩创新大赛启动仪式</span></span></div>
-      <div class="rv d1">
-        <span class="lab">PROJECT 01</span>
-        <h3><span class="ko">한중혁신대회</span><span class="zh">中韩创新大赛</span></h3>
-        <div class="date"><span class="ko">2018년부터 매년 개최 · 2026 제9회 국가급 승격</span><span class="zh">2018年起每年举办 · 2026年第九届升级为国家级</span></div>
-        <p><span class="ko">한·중 과학기술 교류협력의 대표 행사로, 혁신기술과 창업 프로젝트를 발굴해 기술협력, 투자유치, 사업화로 연결합니다. 협회는 한국 측 주관기관으로 대회를 운영합니다.</span><span class="zh">中韩科技交流合作的代表性活动，发掘创新技术与创业项目，对接技术合作、招商引资与产业化。协会作为韩方承办机构运营大赛。</span></p>
-        <dl class="org">
-          <div><dt><span class="ko">주최</span><span class="zh">主办</span></dt><dd><span class="ko">산둥성 인민정부</span><span class="zh">山东省人民政府</span></dd></div>
-          <div><dt><span class="ko">주관</span><span class="zh">承办</span></dt><dd><span class="ko">산둥성 과학기술청 · 웨이하이시 인민정부</span><span class="zh">山东省科学技术厅 · 威海市人民政府</span></dd></div>
-          <div><dt><span class="ko">운영</span><span class="zh">执行</span></dt><dd><span class="ko">산둥성·웨이하이시 과학기술서비스업협회 · 한중과학기술서비스협회</span><span class="zh">山东省及威海市科技服务业协会 · 韩中科学技术服务协会</span></dd></div>
-        </dl>
-        <div class="evn"><div><b>1,800+</b><span class="ko">발굴 프로젝트 (1·2회)</span><span class="zh">发掘项目（第一、二届）</span></div><div><b>42</b><span class="ko">웨이하이 법인 설립 한국 기업</span><span class="zh">在威海设立法人的韩企</span></div><div><b>9<span style="font-size:18px" class="ko">회</span><span style="font-size:18px" class="zh">届</span></b><span class="ko">연속 한국 측 주관</span><span class="zh">连续韩方承办</span></div></div>
-        <a class="more" href="https://www.c-kic.com" target="_blank" rel="noopener">c-kic.com →</a>
-      </div>
+    <div class="meta">
+      <div class="rv"><img data-img="event-schedule" alt=""><div><small>SCHEDULE</small><b class="ko">2026. 5. 7. – 5. 10.<br>3박 4일</b><b class="zh">2026年5月7日–10日<br>四天三晚</b></div></div>
+      <div class="rv d1"><img data-img="event-place" alt=""><div><small>VENUE</small><b class="ko">웨이하이웨이 호텔 3F<br>WEGO HALL</b><b class="zh">威海卫大酒店3楼<br>WEGO HALL</b></div></div>
+      <div class="rv d2"><img data-img="event-target" alt=""><div><small>TARGET</small><b class="ko">의료기기 신소재 · 가정용<br>의료기기 · 디지털 헬스케어</b><b class="zh">医疗器械新材料 · 家用<br>医疗器械 · 数字健康</b></div></div>
     </div>
 
-    <div class="ev rev">
-      <div class="ev-img rv"><img src="img13.jpg" alt="2026 CKMDM" style="object-position:center 78%"><span class="tagl" style="top:22px;bottom:auto"><span class="ko">2026 CKMDM · 웨이하이</span><span class="zh">2026 CKMDM · 威海</span></span></div>
-      <div class="rv d1">
-        <span class="lab">PROJECT 02</span>
-        <h3>CKMDM</h3>
-        <div class="date"><span class="ko">한·중 의료기기 산업협력 비즈니스 매칭 · 2026.5 웨이하이</span><span class="zh">中韩医疗器械产业合作对接会 · 2026.5 威海</span></div>
-        <p><span class="ko">China-Korea Medical Device Industry Cooperation Match Making Conference. 한·중 의료기기·바이오헬스 분야 공식 비즈니스 매칭 프로그램으로 공동연구, 투자유치, 중국 시장 진출을 연결합니다.</span><span class="zh">China-Korea Medical Device Industry Cooperation Match Making Conference。中韩医疗器械及生物健康领域的官方商务对接项目，连接联合研发、招商引资与中国市场准入。</span></p>
-        <dl class="org">
-          <div><dt><span class="ko">주관</span><span class="zh">主办</span></dt><dd><span class="ko">한중과학기술서비스협회 · 위고그룹</span><span class="zh">韩中科学技术服务协会 · 威高集团</span></dd></div>
-          <div><dt><span class="ko">지도</span><span class="zh">指导</span></dt><dd><span class="ko">웨이하이시 상무국</span><span class="zh">威海市商务局</span></dd></div>
-          <div><dt><span class="ko">협력</span><span class="zh">协办</span></dt><dd><span class="ko">오송첨단의료산업진흥재단 · 전남창조경제혁신센터 · 광주전남벤처기업협회</span><span class="zh">五松尖端医疗产业振兴财团 · 全南创造经济革新中心 · 光州全南风险企业协会</span></dd></div>
-        </dl>
-        <div class="evn"><div><b>180+</b><span class="ko">한·중 참가 기관·기업</span><span class="zh">中韩参会机构与企业</span></div><div><b>100+</b><span class="ko">한국 측 투자사</span><span class="zh">韩方投资机构</span></div><div><b>49</b><span class="ko">중국 기업·투자기관 대표</span><span class="zh">中方企业及投资机构代表</span></div></div>
-        <a class="more" href="https://ckmdm.com" target="_blank" rel="noopener">ckmdm.com →</a>
+    <div class="days rv">
+      <div class="dtabs">
+        <button class="on" data-d="1"><b>DAY 1 · 05.07</b><span class="ko">인천 → 웨이하이</span><span class="zh">仁川 → 威海</span></button>
+        <button data-d="2"><b>DAY 2 · 05.08</b><span class="ko">클러스터 · 위고 방문</span><span class="zh">集群 · 考察威高</span></button>
+        <button data-d="3"><b>DAY 3 · 05.09</b><span class="ko">매칭회 본행사</span><span class="zh">对接会主活动</span></button>
+        <button data-d="4"><b>DAY 4 · 05.10</b><span class="ko">웨이하이 → 인천</span><span class="zh">威海 → 仁川</span></button>
       </div>
-    </div>
-
-    <div class="ev">
-      <div class="ev-img rv"><img src="img14.jpg" alt="한중 의료기기산업 융합발전연맹 출범" style="object-position:center 40%"><span class="tagl"><span class="ko">한중 의료기기산업 융합발전연맹 출범</span><span class="zh">中韩医疗器械产业融合发展联盟正式启动</span></span></div>
-      <div class="rv d1">
-        <span class="lab">PROJECT 03</span>
-        <h3><span class="ko">한중(웨이하이) 의료산업 융합발전대회</span><span class="zh">中韩（威海）医疗产业融合发展大会</span></h3>
-        <div class="date"><span class="ko">2024.12.16 – 12.18 · 웨이하이 골든베이 국제호텔</span><span class="zh">2024.12.16 – 12.18 · 威海金湾国际酒店</span></div>
-        <p><span class="ko">한·중 의약·의료기기 산업의 교류와 협력을 넓히는 국제 협력 행사로, 기술협력·투자 연계·공동 사업화의 기반을 마련하고 한·중 제약·의료기기 기술협력 플랫폼을 출범시켰습니다.</span><span class="zh">扩大中韩医药及医疗器械产业交流合作的国际活动，奠定技术合作、投资对接与共同产业化的基础，并启动中韩医药医疗器械技术合作平台。</span></p>
-        <dl class="org">
-          <div><dt><span class="ko">주최</span><span class="zh">主办</span></dt><dd><span class="ko">중국의료기기산업협회 · 한중과학기술서비스협회</span><span class="zh">中国医疗器械行业协会 · 韩中科学技术服务协会</span></dd></div>
-          <div><dt><span class="ko">협력</span><span class="zh">合作</span></dt><dd><span class="ko">위고그룹 · 디샤제약 · 한양대 ERICA 외</span><span class="zh">威高集团 · 迪沙药业 · 汉阳大学ERICA等</span></dd></div>
-        </dl>
-        <div class="evn"><div><b>130+</b><span class="ko">한·중 참가자</span><span class="zh">中韩参会人员</span></div><div><b>10+</b><span class="ko">주최·주관·협력 기관</span><span class="zh">主办·承办·合作机构</span></div></div>
+      <div>
+        <div class="dpanel on" data-p="1">
+          <div>
+            <h4 class="ko">DAY 1 · 인천 → 웨이하이 (5.7 목)</h4><h4 class="zh">DAY 1 · 仁川 → 威海（5月7日 周四）</h4>
+            <p class="loc ko">항공편 MU2018</p><p class="loc zh">航班 MU2018</p>
+            <ul class="tl">
+              <li><time>14:15<br>14:40</time><div><b class="ko">인천 → 웨이하이 출국</b><b class="zh">仁川 → 威海出发</b><span class="ko">약 1시간 20분 비행, 웨이하이 다수이보 국제공항 도착</span><span class="zh">飞行约1小时20分钟，抵达威海大水泊国际机场</span></div></li>
+              <li><time>16:30<br>18:00</time><div><b class="ko">호텔 체크인 및 휴식</b><b class="zh">酒店入住及休息</b></div></li>
+              <li><time>18:00<br>20:00</time><div><b class="ko">저녁 식사</b><b class="zh">晚餐</b></div></li>
+            </ul>
+          </div>
+          <figure><img data-img="venue-map" alt=""></figure>
+        </div>
+        <div class="dpanel" data-p="2">
+          <div>
+            <h4 class="ko">DAY 2 · 웨이하이 현지 일정 (5.8 금)</h4><h4 class="zh">DAY 2 · 威海当地日程（5月8日 周五）</h4>
+            <p class="loc ko">웨이하이</p><p class="loc zh">威海</p>
+            <ul class="tl">
+              <li><time>12:00<br>14:20</time><div><b class="ko">점심 식사 및 휴식</b><b class="zh">午餐及休息</b></div></li>
+              <li class="hl"><time>14:20<br>17:00</time><div><b class="ko">웨이하이시 의료기기 클러스터 및 위고그룹 메디컬단지 방문</b><b class="zh">考察威海市医疗器械产业集群及威高集团医疗园区</b></div></li>
+              <li><time>17:00<br>18:00</time><div><b class="ko">자유 일정</b><b class="zh">自由活动</b></div></li>
+              <li><time>18:00<br>20:00</time><div><b class="ko">저녁 식사</b><b class="zh">晚餐</b></div></li>
+            </ul>
+          </div>
+          <figure><img data-img="wego-visit" alt=""></figure>
+        </div>
+        <div class="dpanel" data-p="3">
+          <div>
+            <h4 class="ko">DAY 3 · 매칭회 본행사 (5.9 토)</h4><h4 class="zh">DAY 3 · 对接会主活动（5月9日 周六）</h4>
+            <p class="loc ko">웨이하이웨이 호텔 3F, WEGO HALL</p><p class="loc zh">威海卫大酒店3楼 WEGO HALL</p>
+            <ul class="tl">
+              <li class="hl"><time>09:00<br>10:00</time><div><b class="ko">매칭회 개막식 및 주제 발표</b><b class="zh">对接会开幕式及主题演讲</b></div></li>
+              <li class="hl"><time>10:00<br>12:00</time><div><b class="ko">한·중 기업 로드쇼 (기업 IR 발표)</b><b class="zh">中韩企业路演（企业IR发布）</b></div></li>
+              <li><time>12:00<br>13:30</time><div><b class="ko">점심 식사</b><b class="zh">午餐</b></div></li>
+              <li class="hl"><time>13:30<br>17:30</time><div><b class="ko">1:1 비즈니스 매칭 · 컨설팅 (사전 매칭)</b><b class="zh">一对一商务对接 · 咨询（预先匹配）</b></div></li>
+              <li><time>17:30<br>19:30</time><div><b class="ko">저녁 만찬</b><b class="zh">晚宴</b></div></li>
+            </ul>
+          </div>
+          <figure><img data-img="program-3" alt=""></figure>
+        </div>
+        <div class="dpanel" data-p="4">
+          <div>
+            <h4 class="ko">DAY 4 · 웨이하이 → 인천 (5.10 일)</h4><h4 class="zh">DAY 4 · 威海 → 仁川（5月10日 周日）</h4>
+            <p class="loc ko">항공편 MU2017</p><p class="loc zh">航班 MU2017</p>
+            <ul class="tl">
+              <li><time>09:00</time><div><b class="ko">호텔 로비 출발</b><b class="zh">酒店大堂出发</b></div></li>
+              <li><time>11:00<br>13:15</time><div><b class="ko">웨이하이 → 인천 입국</b><b class="zh">威海 → 仁川返程</b><span class="ko">약 1시간 10분 비행, 인천국제공항 도착</span><span class="zh">飞行约1小时10分钟，抵达仁川国际机场</span></div></li>
+            </ul>
+          </div>
+          <figure><img data-img="news-1" alt=""></figure>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RESULTS -->
-<section id="results" class="res">
-  <div class="wrap">
-    <div class="st light rv"><span class="en">Achievements</span><h2><span class="ko">주요 성과</span><span class="zh">合作成果</span></h2><p><span class="ko">교류에서 끝나지 않고 계약, 수출, 법인 설립, 투자로 이어진 결과입니다.</span><span class="zh">不止于交流，而是落实为签约、出口、设立法人与投资的成果。</span></p></div>
-    <div class="rg">
-      <div class="rc rv"><span class="k"><span class="ko">한중혁신대회</span><span class="zh">中韩创新大赛</span></span><b>1,800+</b><span class="u"><span class="ko">발굴 혁신 프로젝트</span><span class="zh">发掘创新项目</span></span><p><span class="ko">1·2회 대회에서만 42개 한국 기업의 웨이하이 법인 설립. 2026년 국가급 승격.</span><span class="zh">仅第一、二届即推动42家韩企在威海设立法人。2026年升级为国家级。</span></p></div>
-      <div class="rc rv d1"><span class="k">CKMDM 2026</span><b>180+</b><span class="u"><span class="ko">한·중 참가 기관·기업</span><span class="zh">中韩参会机构与企业</span></span><p><span class="ko">한국 측 투자사 100곳 이상 참가. 투자 확정과 후속 상담 진행.</span><span class="zh">100余家韩方投资机构参会，投资落地与后续洽谈持续推进。</span></p></div>
-      <div class="rc rv d2"><span class="k"><span class="ko">산둥 셀렉트 코리아</span><span class="zh">山东精选韩国</span></span><b>430,000</b><span class="u"><span class="ko">행사 시청</span><span class="zh">观看人次</span></span><p><span class="ko">산둥성 상무청 주최 한국 상품 행사 주관. 한국 제품 350종 중국 진출 IR.</span><span class="zh">承办山东省商务厅主办的韩国商品活动，为350种韩国产品举办进入中国路演。</span></p></div>
-      <div class="rc rv"><span class="k"><span class="ko">의료기기 수권 사업</span><span class="zh">医疗器械授权业务</span></span><b>40+</b><span class="u"><span class="ko">2025 성과 기업</span><span class="zh">2025年成果企业</span></span><p><span class="ko">웨이하이 의약·의료기기산업협회 수권 기반 사업, 연계 투자사 30곳 이상.</span><span class="zh">基于威海市医药医疗器械产业协会授权，对接投资机构30余家。</span></p></div>
-      <div class="rc rv d1"><span class="k">KOSDAQ</span><b><span class="ko">상장사</span><span class="zh">上市公司</span></b><span class="u"><span class="ko">휴럼 중국 진출 구조 설계</span><span class="zh">HURUM进入中国架构设计</span></span><p><span class="ko">중국 현지 합작과 유통 협력의 두 갈래 진출 구조를 설계·추진.</span><span class="zh">设计并推进中国本地合资与分销合作的双轨进入架构。</span></p></div>
-      <div class="rc rv d2"><span class="k">EXPORT</span><b>BUENO</b><span class="u"><span class="ko">한국 화장품 중국 수출 성사</span><span class="zh">韩国化妆品成功出口中国</span></span><p><span class="ko">브랜드 수권·판매 채널·홍보·물류 전 과정 지원, 2차 계약까지 성사.</span><span class="zh">全程支持品牌授权、渠道、宣传与物流，促成第二批合同。</span></p></div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
+<!-- =====================================================
+     GALLERY
+     (사진 추가: 아래 GALLERY 배열에 한 줄씩 추가하면 자동 반영)
+     ===================================================== -->
 <section id="gallery">
   <div class="wrap">
-    <div class="st rv"><span class="en">Field Activities</span><h2><span class="ko">현장 활동</span><span class="zh">现场活动</span></h2></div>
-    <div class="gal rv">
-      <figure class="w h"><img src="img15.jpg" alt="2026 위고 글로벌 파트너스 컨퍼런스"><figcaption><span class="ko">2026 위고 글로벌 파트너스 컨퍼런스</span><span class="zh">2026威高全球合作伙伴大会</span></figcaption></figure>
-      <figure><img src="img16.jpg" alt="위고 글로벌 파트너스 컨퍼런스 단체사진" style="object-position:center 75%"><figcaption><span class="ko">위고 글로벌 파트너스 컨퍼런스 단체사진</span><span class="zh">威高全球合作伙伴大会合影</span></figcaption></figure>
-      <figure><img src="img17.jpg" alt="한국 기업 대표단 중국 현장 방문" style="object-position:center 70%"><figcaption><span class="ko">한국 기업 대표단 중국 현장 방문</span><span class="zh">韩国企业代表团实地考察</span></figcaption></figure>
-      <figure><img src="img18.jpg" alt="제8회 한중혁신대회 웨이하이 협력교류회"><figcaption><span class="ko">제8회 한중혁신대회 웨이하이 협력교류회</span><span class="zh">第八届中韩创新大赛 威海路演对接会</span></figcaption></figure>
-      <figure><img src="img19.jpg" alt="한국혁신기업 웨이하이 협력교류회 현장" style="object-position:center 70%"><figcaption><span class="ko">한국혁신기업 웨이하이 협력교류회 현장</span><span class="zh">韩国创新企业威海路演对接会现场</span></figcaption></figure>
-      <figure class="w"><img src="img20.jpg" alt="2024 한중과학기술혁신협력대회"><figcaption><span class="ko">2024 한중과학기술혁신협력대회</span><span class="zh">2024中韩科技创新合作大会</span></figcaption></figure>
-      <figure><img src="img21.jpg" alt="제4회 한중혁신대회 시상식"><figcaption><span class="ko">제4회 한중혁신대회 시상식</span><span class="zh">第四届中韩创新大赛颁奖大会</span></figcaption></figure>
-      <figure><img src="img22.jpg" alt="제5회 한중혁신대회 시상식" style="object-position:center 60%"><figcaption><span class="ko">제5회 한중혁신대회 시상식</span><span class="zh">第五届中韩创新大赛颁奖大会</span></figcaption></figure>
+    <div class="center">
+      <span class="kicker c rv">Photo Gallery</span>
+      <h2 class="h2 rv d1"><span class="ko">현장에서 만난 <b>CKMDM</b></span><span class="zh">现场直击 <b>CKMDM</b></span></h2>
+      <p class="desc rv d2"><span class="ko">2026 웨이하이 매칭회와 위고그룹 현장의 순간들</span><span class="zh">2026威海对接会与威高集团现场精彩瞬间</span></p>
     </div>
+    <div class="gal" id="gal"></div>
   </div>
 </section>
 
-<!-- HISTORY -->
-<section id="history" class="bg">
+<!-- =====================================================
+     WEGO
+     ===================================================== -->
+<section id="wego" class="bg">
   <div class="wrap">
-    <div class="st rv"><span class="en">History</span><h2><span class="ko">주요 연혁</span><span class="zh">发展历程</span></h2></div>
-    <div class="tl">
-      <div class="tr rv"><div class="y">2026</div><div class="d"><h4><span class="ko">제9회 한중혁신대회 국가급 승격 · CKMDM 주관</span><span class="zh">第九届中韩创新大赛升级为国家级 · 主办CKMDM</span></h4><p><span class="ko">한·중 정상회담 과학기술 교류 합의를 계기로 설립된 중한일협력센터(옌타이)와 협력</span><span class="zh">与以中韩首脑会谈科技交流共识为契机设立的中日韩合作中心（烟台）开展合作</span></p></div></div>
-      <div class="tr rv"><div class="y">2025</div><div class="d"><h4><span class="ko">한중혁신협력노드 설립 공식 승인</span><span class="zh">中韩创新合作节点设立获正式批准</span></h4><p><span class="ko">웨이하이 의약·의료기기산업협회 수권 사업으로 40개 이상 기업 성과</span><span class="zh">基于威海市医药医疗器械产业协会授权，为40余家企业创造成果</span></p></div></div>
-      <div class="tr rv"><div class="y">2024</div><div class="d"><h4><span class="ko">제1회 한중(웨이하이) 의료산업 융합발전대회 주최</span><span class="zh">主办第一届中韩（威海）医疗产业融合发展大会</span></h4><p><span class="ko">중국의료기기산업협회와 공동 주최 · 한·중 제약·의료기기 기술협력 플랫폼 출범</span><span class="zh">与中国医疗器械行业协会共同主办 · 启动中韩医药医疗器械技术合作平台</span></p></div></div>
-      <div class="tr rv"><div class="y">2020</div><div class="d"><h4><span class="ko">산둥 셀렉트 코리아 주관</span><span class="zh">承办"山东精选韩国"</span></h4><p><span class="ko">약 43만 명 시청 · 한국 제품 350종 중국 진출 IR</span><span class="zh">约43万人次观看 · 350种韩国产品进入中国路演</span></p></div></div>
-      <div class="tr rv"><div class="y">2018</div><div class="d"><h4><span class="ko">한중혁신대회 출범</span><span class="zh">中韩创新大赛启动</span></h4><p><span class="ko">이후 매년 한국 측 주관기관으로 운영</span><span class="zh">此后每年担任韩方承办机构</span></p></div></div>
+    <div class="center">
+      <span class="kicker c rv">About WEGO Group</span>
+      <h2 class="h2 rv d1"><span class="ko">중국 의료산업을 선도하는<br><b>글로벌 헬스케어 그룹</b></span><span class="zh">引领中国医疗产业的<br><b>全球医疗健康集团</b></span></h2>
+      <p class="desc rv d2"><span class="ko">WEGO Group은 1988년 설립 이후 의료기기, 디지털 헬스케어, 의료소모품 분야를 중심으로 글로벌 시장을 확장해 온 중국 대표 의료산업 그룹입니다. CKMDM의 공동주관사이자 한국관의 산업 파트너입니다.</span><span class="zh">威高集团自1988年成立以来，围绕医疗器械、数字健康、医用耗材领域不断拓展全球市场，是中国代表性的医疗产业集团，也是CKMDM联合承办方及韩国馆产业合作伙伴。</span></p>
     </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="wrap">
-    <div class="st rv"><span class="en">Contact Us</span><h2><span class="ko">협력 문의</span><span class="zh">合作咨询</span></h2><p><span class="ko">중국 진출, 투자유치, 기술협력, 행사 참가 등 협력을 원하시면 언제든 문의해 주십시오.</span><span class="zh">如有进入中国、招商引资、技术合作、参会等合作需求，欢迎随时咨询。</span></p></div>
-    <div class="ct">
-      <div class="ct-info rv">
-        <h3><span class="ko">한중과학기술서비스협회</span><span class="zh">韩中科学技术服务协会</span></h3>
-        <p>Korea-China Science &amp; Technology Services Association</p>
-        <ul class="ci">
-          <li><span><span class="ko">전화</span><span class="zh">电话</span></span><a href="tel:+8617615421772">+86 176 1542 1772</a></li>
-          <li><span><span class="ko">이메일</span><span class="zh">邮箱</span></span><a href="mailto:kcstsa@nate.com">kcstsa@nate.com</a></li>
-          <li><span><span class="ko">주소</span><span class="zh">地址</span></span><div><span class="ko">중국 산둥성 웨이하이시 경제기술개발구<br>홍콩로 18-1 스마트빌딩 905호</span><span class="zh">中国山东省威海市经济技术开发区<br>香港路18-1号 智慧大厦905室</span></div></li>
-          <li><span>Web</span><div><a href="https://www.c-kic.com" target="_blank" rel="noopener">c-kic.com</a> · <a href="https://ckmdm.com" target="_blank" rel="noopener">ckmdm.com</a></div></li>
-        </ul>
+    <div class="wego-row">
+      <div class="wi contain rv"><img data-img="wego-main" alt="WEGO 글로벌 네트워크"></div>
+      <div class="wt rv d1">
+        <span class="kicker">Global Healthcare Network</span>
+        <div class="big">100<span style="font-size:.5em">+</span></div>
+        <h3><span class="ko">100여 개국으로 확장된<br>글로벌 유통 네트워크</span><span class="zh">覆盖100多个国家的<br>全球销售网络</span></h3>
+        <p><span class="ko">전 세계 100여 개국에 제품을 수출하며 글로벌 의료산업 공급망을 구축하고 있습니다. 한국관 입주 기업은 이 네트워크를 통해 해외 판로까지 확보할 수 있습니다.</span><span class="zh">产品出口全球100多个国家，构建了全球医疗产业供应链。韩国馆入驻企业可借助该网络拓展海外销路。</span></p>
       </div>
-      <form id="form" class="rv d1" novalidate>
-        <div class="row">
-          <div class="f"><label><span class="ko">성함 *</span><span class="zh">姓名 *</span></label><input name="name" autocomplete="name"></div>
-          <div class="f"><label><span class="ko">회사·기관명 *</span><span class="zh">公司/机构 *</span></label><input name="org" autocomplete="organization"></div>
-        </div>
-        <div class="row">
-          <div class="f"><label><span class="ko">연락처</span><span class="zh">联系电话</span></label><input name="phone" autocomplete="tel"></div>
-          <div class="f"><label><span class="ko">이메일 *</span><span class="zh">邮箱 *</span></label><input name="email" type="email" autocomplete="email"></div>
-        </div>
-        <div class="f"><label><span class="ko">문의 분야</span><span class="zh">咨询类别</span></label>
-          <select name="type" id="type">
-            <option data-ko="의료기기·바이오 중국진출" data-zh="医疗器械·生物进入中国">의료기기·바이오 중국진출</option>
-            <option data-ko="AI 매칭 (무료 AI 진단)" data-zh="AI对接（免费AI诊断）">AI 매칭 (무료 AI 진단)</option>
-            <option data-ko="투자유치·펀드" data-zh="招商引资·基金">투자유치·펀드</option>
-            <option data-ko="과학기술 교류·인재 협력" data-zh="科技交流·人才合作">과학기술 교류·인재 협력</option>
-            <option data-ko="한·중 상호진출 지원" data-zh="中韩双向进入支持">한·중 상호진출 지원</option>
-            <option data-ko="행사 참가 (한중혁신대회·CKMDM)" data-zh="参会（中韩创新大赛·CKMDM）">행사 참가 (한중혁신대회·CKMDM)</option>
-            <option data-ko="기타" data-zh="其他">기타</option>
-          </select></div>
-        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px" aria-hidden="true">
-        <div class="f"><label><span class="ko">문의 내용 *</span><span class="zh">咨询内容 *</span></label><textarea name="msg"></textarea></div>
-        <button class="btn btn-navy" type="submit"><span class="ko">문의 보내기</span><span class="zh">提交咨询</span></button>
-        <div class="note" id="note"></div>
-      </form>
+    </div>
+    <div class="wego-row rev">
+      <div class="wi rv"><img data-img="wego-innovation" alt="WEGO 연구개발"></div>
+      <div class="wt rv d1">
+        <span class="kicker">Medical Innovation</span>
+        <div class="big">1,300<span style="font-size:.5em">+</span></div>
+        <h3><span class="ko">1,300건 이상의 특허와<br>글로벌 인증 기술력</span><span class="zh">1,300余项专利与<br>全球认证技术实力</span></h3>
+        <p><span class="ko">CE·FDA 인증과 자체 기술 개발을 기반으로 중국 의료산업의 기술 혁신을 선도하고 있습니다.</span><span class="zh">依托CE·FDA认证与自主技术研发，引领中国医疗产业技术创新。</span></p>
+      </div>
+    </div>
+    <div class="wego-row">
+      <div class="wi rv"><img data-img="wego-network" alt="WEGO 본사"></div>
+      <div class="wt rv d1">
+        <span class="kicker">Integrated Medical Platform</span>
+        <h3 style="margin-top:22px"><span class="ko">의료기기부터<br>디지털 헬스케어까지</span><span class="zh">从医疗器械<br>到数字健康</span></h3>
+        <p><span class="ko">정형외과, 혈액투석, 수술장비, 의료소모품 등 의료 전 분야를 아우르는 통합 사업 구조를 갖추고 있습니다.</span><span class="zh">业务覆盖骨科、血液透析、手术设备、医用耗材等医疗全领域，形成一体化产业结构。</span></p>
+        <div class="wtags"><span class="ko">정형외과</span><span class="zh">骨科</span><span class="ko">혈액투석</span><span class="zh">血液透析</span><span class="ko">수술장비</span><span class="zh">手术设备</span><span class="ko">의료소모품</span><span class="zh">医用耗材</span><span class="ko">디지털 헬스케어</span><span class="zh">数字健康</span></div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- =====================================================
+     ORGANIZER & PARTNERS
+     ===================================================== -->
+<section id="org" class="dark">
+  <div class="wrap">
+    <div class="org">
+      <div>
+        <span class="kicker rv">Organizer</span>
+        <h2 class="h2 rv d1"><span class="ko">한중과학기술서비스협회가<br>설계하고 끝까지 동행합니다</span><span class="zh">中韩科学技术服务协会<br>全程设计、全程陪同</span></h2>
+        <p class="desc rv d2"><span class="ko">산둥성 웨이하이에 본부를 둔 한·중 산업협력 플랫폼. 웨이하이 의약·의료기기산업협회와의 협력을 바탕으로 CKMDM을 총괄 기획·운영하며, 한국 기업의 중국 진출을 주도해 왔습니다.</span><span class="zh">总部位于山东省威海的中韩产业合作平台。依托与威海市医药·医疗器械产业协会的合作，全面策划和运营CKMDM，主导韩国企业进入中国市场。</span></p>
+        <div class="kl rv d3" style="margin-top:34px"><img data-img="partner-2" alt="KCSTSA"><span>한중과학기술서비스협회</span></div>
+      </div>
+      <div class="nums rv d1">
+        <div><b>1,000+</b><span class="ko">긴밀한 중·한 기업 파트너</span><span class="zh">紧密合作的中韩企业伙伴</span></div>
+        <div><b>200+</b><span class="ko">투자 파트너 (AC·VC·PE·신기사)</span><span class="zh">投资伙伴（AC·VC·PE·新技术金融）</span></div>
+        <div><b>100+</b><span class="ko">중국 언론 네트워크</span><span class="zh">中国媒体网络</span></div>
+        <div><b class="kr"><span class="ko">국가급</span><span class="zh">国家级</span></b><span class="ko">한중혁신대회 운영</span><span class="zh">运营中韩创新大赛</span></div>
+      </div>
+    </div>
+
+    <p class="plabel rv">ORGANIZERS &amp; PARTNERS</p>
+    <div class="plogos rv">
+      <div><span class="txt ko">웨이하이시<br>상무국</span><span class="txt zh">威海市<br>商务局</span><small class="ko">주최</small><small class="zh">主办</small></div>
+      <div><img data-img="partner-1" alt="WEGO Group"><small class="ko">공동주관</small><small class="zh">联合承办</small></div>
+      <div><img data-img="partner-2" alt="KCSTSA"><small>한중과학기술서비스협회 · <span class="ko">총괄 기획·운영</span><span class="zh">总策划·运营</span></small></div>
+      <div><img data-img="partner-3" alt="오송첨단의료산업진흥재단"><small class="ko">협력기관</small><small class="zh">合作机构</small></div>
+      <div><img data-img="partner-4" alt="전남창조경제혁신센터"><small class="ko">협력기관</small><small class="zh">合作机构</small></div>
+      <div><img data-img="partner-5" alt="광주전남벤처기업협회"><small class="ko">협력기관</small><small class="zh">合作机构</small></div>
+    </div>
+
+    <p class="plabel rv"><span class="ko">협회 주요 실적</span><span class="zh">协会主要业绩</span></p>
+    <div class="ach">
+      <figure class="rv"><img data-img="alliance" alt=""><figcaption><b class="ko">중한 의료기기산업 융합발전연맹 출범</b><b class="zh">中韩医疗器械产业融合发展联盟正式启动</b></figcaption></figure>
+      <figure class="rv d1"><img data-img="kic-9" alt=""><figcaption><b class="ko">제9회 한중혁신대회 개막</b><b class="zh">第九届中韩创新大赛启动仪式</b></figcaption></figure>
+      <figure class="rv d2"><img data-img="kic-2025" alt=""><figcaption><b class="ko">2025 한중과학기술혁신협력대회</b><b class="zh">2025中韩科技创新合作大会</b></figcaption></figure>
+      <figure class="rv d3"><img data-img="kic-7" alt=""><figcaption><b class="ko">한중혁신대회 현장</b><b class="zh">中韩创新大赛现场</b></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     VENUE
+     ===================================================== -->
+<section id="venue">
+  <div class="wrap">
+    <div class="venue rv">
+      <figure><img data-img="venue-map" alt="웨이하이웨이 호텔"></figure>
+      <div class="vt">
+        <span class="kicker">Venue</span>
+        <h3><span class="ko">웨이하이웨이 호텔 3F<br>WEGO HALL</span><span class="zh">威海卫大酒店3楼<br>WEGO HALL</span></h3>
+        <dl>
+          <div><dt>ADDRESS</dt><dd class="ko">중국 산둥성 웨이하이시 웨이하이웨이 호텔 3층 WEGO HALL</dd><dd class="zh">中国山东省威海市 威海卫大酒店3楼 WEGO HALL</dd><dd class="en" style="color:var(--muted);font-size:14px">WEGO HALL, 3F, Weihai Wei Hotel, Weihai, Shandong, China</dd></div>
+          <div><dt>ACCOMMODATION</dt><dd class="ko">더블트리 바이 힐튼 웨이하이 (행사장 도보 5분)</dd><dd class="zh">威海希尔顿逸林酒店（步行5分钟至会场）</dd></div>
+          <div><dt>AIRPORT</dt><dd class="ko">웨이하이 다수이보 국제공항 (인천에서 약 1시간 20분)</dd><dd class="zh">威海大水泊国际机场（距仁川约1小时20分钟）</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     NEWS
+     ===================================================== -->
+<section id="news" class="bg">
+  <div class="wrap">
+    <div class="center">
+      <span class="kicker c rv">Press</span>
+      <h2 class="h2 rv d1"><span class="ko">언론이 말하는 <b>CKMDM</b></span><span class="zh">媒体眼中的 <b>CKMDM</b></span></h2>
+    </div>
+    <div class="news">
+      <a class="nc rv" href="https://www.etnews.com/20260512000495" target="_blank" rel="noopener">
+        <div class="ph"><img data-img="news-3" alt=""></div>
+        <div class="bd">
+          <div class="src"><b>전자신문</b><span>2026.05.12</span></div>
+          <h3>'2026 한중 의료기기 산업 협력 기회 매칭회' 성료… 국내 33개사 中 진출 가능성 확인</h3>
+          <p>한국 참가기업 33개사가 중국 기업 49개사와 개별 상담을 진행하며 협력 성과가 이어지고 있다.</p>
+          <span class="more"><span class="ko">기사 보기</span><span class="zh">查看报道</span> →</span>
+        </div>
+      </a>
+      <a class="nc rv d1" href="https://www.enetnews.co.kr/news/articleView.html?idxno=49942" target="_blank" rel="noopener">
+        <div class="ph"><img data-img="news-2" alt=""></div>
+        <div class="bd">
+          <div class="src"><b>이넷뉴스</b><span>2026.05.12</span></div>
+          <h3>한중과학기술서비스협회·위고그룹 공동 주관 '대규모 매칭회' 성료</h3>
+          <p>2026 한중(웨이하이) 의료기기 산업 협력 기회 매칭회가 성공적으로 마무리됐다.</p>
+          <span class="more"><span class="ko">기사 보기</span><span class="zh">查看报道</span> →</span>
+        </div>
+      </a>
+      <a class="nc rv d2" href="https://www.etnews.com/20260513000224" target="_blank" rel="noopener">
+        <div class="ph"><img data-img="news-1" alt=""></div>
+        <div class="bd">
+          <div class="src"><b>전자신문</b><span>2026.05.13</span></div>
+          <h3>전남창조경제혁신센터, '2026 한중(웨이하이) 의료기기 산업협력 기회 매칭회' 성료</h3>
+          <p>전남창경 참여기업 10개사와 협회 참여기업 23개사 등 총 33개사가 참가했다.</p>
+          <span class="more"><span class="ko">기사 보기</span><span class="zh">查看报道</span> →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     NMPA AI 자가진단 (KCAI_코드02 외부용 간이 버전)
+     ===================================================== -->
+<style>
+#nmpa .nv-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:28px;margin-top:56px;align-items:start}
+@media(max-width:980px){#nmpa .nv-grid{grid-template-columns:1fr}}
+#nmpa .nv-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:34px 34px 30px}
+#nmpa .nv-q{margin-bottom:24px}
+#nmpa .nv-q.hide{display:none}
+#nmpa .nv-ql{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px;margin-bottom:12px}
+#nmpa .nv-ql i{font-style:normal;font-family:var(--en);font-size:12px;font-weight:800;background:var(--blue-soft);color:var(--blue-d);border-radius:20px;padding:3px 10px}
+#nmpa .nv-ops{display:flex;flex-wrap:wrap;gap:8px}
+#nmpa .nv-ops button{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:11px 16px;font-size:14.5px;font-weight:600;color:var(--text);cursor:pointer;transition:.2s;text-align:left;line-height:1.35}
+#nmpa .nv-ops button small{display:block;font-size:11.5px;font-weight:500;color:var(--muted);margin-top:2px}
+#nmpa .nv-ops button:hover{border-color:var(--blue)}
+#nmpa .nv-ops button.on{background:var(--blue);border-color:var(--blue);color:#fff}
+#nmpa .nv-ops button.on small{color:rgba(255,255,255,.8)}
+#nmpa .nv-chk{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+@media(max-width:640px){#nmpa .nv-chk{grid-template-columns:1fr}#nmpa .nv-card{padding:26px 20px}}
+#nmpa .nv-chk label{display:flex;gap:9px;align-items:flex-start;font-size:14.5px;cursor:pointer;line-height:1.45}
+#nmpa .nv-chk input{margin-top:4px;accent-color:var(--blue);width:16px;height:16px}
+#nmpa .nv-in{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;font-family:inherit}
+#nmpa .nv-in:focus{outline:0;border-color:var(--blue)}
+#nmpa .nv-res{position:sticky;top:calc(var(--hh) + 20px);background:var(--navy);color:#fff;border-radius:var(--r);padding:34px;box-shadow:var(--sh2);overflow:hidden}
+#nmpa .nv-res:before{content:"";position:absolute;right:-80px;top:-80px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(44,145,236,.45),transparent 70%)}
+#nmpa .nv-res .k{font-family:var(--en);font-size:12px;letter-spacing:.2em;color:#7CC0FF;font-weight:700}
+#nmpa .nv-big{font-family:var(--en);font-size:76px;font-weight:900;line-height:1;margin:16px 0 6px;letter-spacing:-.02em}
+#nmpa .nv-big small{font-family:'Noto Sans KR',sans-serif;font-size:22px;font-weight:700;margin-left:6px}
+#nmpa .nv-c1{color:#5BE3A5}#nmpa .nv-c2{color:#FFC24B}#nmpa .nv-c3{color:#FF6B7D}
+#nmpa .nv-sub{color:rgba(255,255,255,.72);font-size:14.5px;min-height:44px}
+#nmpa .nv-path{margin-top:20px;border-top:1px solid rgba(255,255,255,.14);padding-top:18px;display:grid;gap:12px}
+#nmpa .nv-path div{background:rgba(255,255,255,.06);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.55}
+#nmpa .nv-path b{display:block;color:#7CC0FF;font-size:12.5px;margin-bottom:2px}
+#nmpa .nv-flag{margin-top:14px;background:rgba(215,38,61,.18);border:1px solid rgba(255,107,125,.4);border-radius:12px;padding:11px 14px;font-size:13.5px;line-height:1.5}
+#nmpa .nv-res .btn{margin-top:22px;width:100%;justify-content:center}
+#nmpa .nv-disc{font-size:12px;color:rgba(255,255,255,.5);margin-top:16px;line-height:1.55}
+#nmpa .nv-empty{color:rgba(255,255,255,.6);font-size:15px;margin-top:18px}
+#nmpa .nv-prog{height:6px;background:rgba(255,255,255,.12);border-radius:6px;margin-top:18px;overflow:hidden}
+#nmpa .nv-prog i{display:block;height:100%;width:0;background:var(--blue);transition:.4s}
+#nmpa .nv-ai{display:inline-flex;align-items:center;gap:8px;background:var(--blue-soft);color:var(--blue-d);font-weight:800;font-size:13px;border-radius:30px;padding:6px 14px;margin-top:22px}
+</style>
+
+<section id="nmpa">
+  <div class="wrap">
+    <div class="center">
+      <span class="kicker c rv">NMPA AI Navigator</span>
+      <h2 class="h2 rv d1"><span class="ko">우리 제품, 중국에서는<br><b>몇 등급</b>일까요?</span><span class="zh">您的产品在中国<br>属于<b>第几类</b>医疗器械？</span></h2>
+      <p class="desc rv d2"><span class="ko">질문 몇 개에 답하면 중국 「의료기기 분류규칙」에 따라 NMPA 예상 등급과 기본 인허가 경로를 바로 알려 드립니다. 결과를 바탕으로 협회가 상세 진단 리포트를 무료로 보내 드립니다.</span><span class="zh">只需回答几个问题，即可依据《医疗器械分类规则》即时获得NMPA预估类别及基本注册路径。协会将根据结果免费为您提供详细诊断报告。</span></p>
+      <div class="nv-ai rv d3">KCAI_코드02 · <span class="ko">한중과학기술서비스협회 AI 인허가 내비게이터</span><span class="zh">中韩科学技术服务协会 AI注册导航</span></div>
+    </div>
+
+    <div class="nv-grid">
+      <div class="nv-card rv d1">
+        <div class="nv-q">
+          <div class="nv-ql"><i>01</i><span class="ko">제품명</span><span class="zh">产品名称</span></div>
+          <input class="nv-in" id="nvName" placeholder="예) 생분해성 골 고정 나사 / 例：可吸收骨固定螺钉">
+        </div>
+        <div class="nv-q">
+          <div class="nv-ql"><i>02</i><span class="ko">체외진단(IVD) 제품입니까?</span><span class="zh">是否为体外诊断（IVD）产品？</span></div>
+          <div class="nv-ops" data-k="ivd"><button data-v="N"><span class="ko">아니오</span><span class="zh">否</span></button><button data-v="Y"><span class="ko">예 (진단시약·키트)</span><span class="zh">是（诊断试剂）</span></button></div>
+        </div>
+        <div id="nvMain">
+          <div class="nv-q">
+            <div class="nv-ql"><i>03</i><span class="ko">전기 등 동력원이 있습니까?</span><span class="zh">是否依靠电能等能源工作？</span></div>
+            <div class="nv-ops" data-k="power"><button data-v="passive"><span class="ko">없음</span><span class="zh">否</span><small>无源</small></button><button data-v="active"><span class="ko">있음</span><span class="zh">是</span><small>有源</small></button></div>
+          </div>
+          <div class="nv-q">
+            <div class="nv-ql"><i>04</i><span class="ko">인체에 직접 닿거나 들어갑니까?</span><span class="zh">是否接触人体？</span></div>
+            <div class="nv-ops" data-k="contact"><button data-v="Y"><span class="ko">접촉함</span><span class="zh">接触</span></button><button data-v="N"><span class="ko">접촉 안 함</span><span class="zh">不接触</span></button></div>
+          </div>
+          <div class="nv-q" id="nvQForm">
+            <div class="nv-ql"><i>05</i><span class="ko">제품 형태</span><span class="zh">使用形式</span></div>
+            <div class="nv-ops" data-k="form"></div>
+          </div>
+          <div class="nv-q hide" id="nvQDur">
+            <div class="nv-ql"><i>06</i><span class="ko">연속 사용 시간</span><span class="zh">使用时限</span></div>
+            <div class="nv-ops" data-k="dur"><button data-v="0"><span class="ko">24시간 미만</span><span class="zh">24小时以内</span></button><button data-v="1"><span class="ko">24시간~30일</span><span class="zh">24小时~30日</span></button><button data-v="2"><span class="ko">30일 초과</span><span class="zh">超过30日</span></button></div>
+          </div>
+          <div class="nv-q hide" id="nvQSite">
+            <div class="nv-ql"><i>07</i><span class="ko">접촉 부위</span><span class="zh">接触部位</span></div>
+            <div class="nv-ops" data-k="site"><button data-v="0"><span class="ko">피부·구강 등 표면</span><span class="zh">皮肤/腔道</span></button><button data-v="1"><span class="ko">상처·조직·뼈</span><span class="zh">创伤/组织</span></button><button data-v="2"><span class="ko">혈관·심장·중추신경</span><span class="zh">血液循环/中枢神经</span></button></div>
+          </div>
+          <div class="nv-q hide" id="nvQInj">
+            <div class="nv-ql"><i>06</i><span class="ko">오작동 시 인체 위험도</span><span class="zh">失效时可能造成的损伤</span></div>
+            <div class="nv-ops" data-k="inj"><button data-v="0"><span class="ko">경미</span><span class="zh">轻微</span></button><button data-v="1"><span class="ko">중간</span><span class="zh">中度</span></button><button data-v="2"><span class="ko">심각</span><span class="zh">严重</span></button></div>
+          </div>
+          <div class="nv-q hide" id="nvQInf">
+            <div class="nv-ql"><i>06</i><span class="ko">진단·치료 결과에 미치는 영향</span><span class="zh">对诊疗结果的影响</span></div>
+            <div class="nv-ops" data-k="inf"><button data-v="0"><span class="ko">거의 없음</span><span class="zh">基本不影响</span></button><button data-v="1"><span class="ko">일부 영향</span><span class="zh">轻微影响</span></button><button data-v="2"><span class="ko">중요한 영향</span><span class="zh">重要影响</span></button></div>
+          </div>
+          <div class="nv-q">
+            <div class="nv-ql"><i>08</i><span class="ko">해당 사항 (모두 선택)</span><span class="zh">适用情况（可多选）</span></div>
+            <div class="nv-chk">
+              <label><input type="checkbox" data-x="absorb"><span><span class="ko">체내에서 분해·흡수됨</span><span class="zh">可被人体吸收</span></span></label>
+              <label><input type="checkbox" data-x="drug"><span><span class="ko">약물이 결합된 제품</span><span class="zh">含药（药械组合）</span></span></label>
+              <label><input type="checkbox" data-x="sterile"><span><span class="ko">멸균 상태로 공급</span><span class="zh">以无菌形式提供</span></span></label>
+              <label><input type="checkbox" data-x="measure"><span><span class="ko">측정·계량 기능</span><span class="zh">具有计量测试功能</span></span></label>
+              <label><input type="checkbox" data-x="disease"><span><span class="ko">특정 질병 치료 목적</span><span class="zh">明确用于疾病治疗</span></span></label>
+              <label><input type="checkbox" data-x="animal"><span><span class="ko">동물 유래 원료 포함</span><span class="zh">含动物源性材料</span></span></label>
+              <label><input type="checkbox" data-x="ai"><span><span class="ko">AI 기반 진단·판독</span><span class="zh">人工智能辅助诊断</span></span></label>
+              <label><input type="checkbox" data-x="key"><span><span class="ko">치료 효과에 결정적 역할</span><span class="zh">对治疗效果有重要影响</span></span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="nv-res rv d2" id="nvRes">
+        <div class="k">ESTIMATED NMPA CLASS</div>
+        <div id="nvOut"><p class="nv-empty"><span class="ko">왼쪽 질문에 답하면 예상 등급이 여기에 표시됩니다.</span><span class="zh">回答左侧问题后，预估类别将显示在此处。</span></p></div>
+        <div class="nv-prog"><i id="nvBar"></i></div>
+        <a href="#apply" class="btn btn-p" id="nvCta"><span class="ko">상세 진단 리포트 무료 신청</span><span class="zh">免费申请详细诊断报告</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        <p class="nv-disc"><span class="ko">※ 본 결과는 중국 「의료기기 분류규칙」(국가식약총국령 제15호)에 따른 참고용 추정입니다. 최종 등급은 「의료기기 분류목록」 대조 및 NMPA 판정으로 확정됩니다. 입력 내용은 신청하기 전까지 저장·전송되지 않습니다.</span><span class="zh">※ 本结果依据《医疗器械分类规则》（原国家食药监总局令第15号）作出，仅供参考。最终类别以《医疗器械分类目录》及NMPA界定结果为准。提交申请前，输入内容不会被保存或发送。</span></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<script>
+(()=>{
+const F={
+ passive:{Y:{
+  liquid:["액체 이송","液体输送器械",[[2,2,3],[2,2,3],[2,3,3]]],
+  blood:["혈액·체액 처리","改变血液体液器械",[[0,0,3],[0,0,3],[0,0,3]]],
+  dressing:["드레싱·창상피복","医用敷料",[[1,2,2],[1,2,2],[0,3,3]]],
+  invasive:["침습 기구(카테터·바늘 등)","侵入器械",[[1,2,3],[2,2,3],[0,0,0]]],
+  reusable:["재사용 수술기구","重复使用手术器械",[[1,1,2],[0,0,0],[0,0,0]]],
+  implant:["체내 이식형","植入器械",[[0,0,0],[0,0,0],[3,3,3]]],
+  contra:["피임·가족계획","避孕和计划生育器械",[[2,3,3],[2,3,3],[3,3,3]]],
+  other:["기타","其他无源器械",[[1,2,3],[2,2,3],[2,3,3]]]},
+ N:{care:["간호 용품","护理器械",1],clean:["세척·소독 기구","清洗消毒器械",2],other:["기타","其他无源器械",1]}},
+ active:{Y:{
+  energy:["에너지 치료(레이저·고주파 등)","能量治疗器械",[2,2,3]],
+  diag:["진단·모니터링","诊断监护器械",[2,2,3]],
+  liquid:["주입·펌프","液体输送器械",[2,2,3]],
+  ion:["방사선(X선 등)","电离辐射器械",[2,2,3]],
+  implant:["능동 이식형","有源植入器械",[3,3,3]],
+  other:["기타","其他有源器械",[2,2,3]]},
+ N:{lab:["검사 장비","临床检验仪器设备",[1,2,3]],sw:["의료 소프트웨어(SaMD)","独立软件",[2,2,3]],steril:["멸균 장비","消毒灭菌设备",[2,2,3]],other:["기타","其他有源器械",[1,2,3]]}}
+};
+const S={},X={};const $=id=>document.getElementById(id);
+const sec=$('nmpa');
+function bind(box){box.querySelectorAll('button').forEach(b=>b.onclick=()=>{S[box.dataset.k]=b.dataset.v;if(box.dataset.k==='power'||box.dataset.k==='contact')delete S.form;draw()})}
+sec.querySelectorAll('.nv-ops').forEach(bind);
+sec.querySelectorAll('[data-x]').forEach(c=>c.onchange=()=>{X[c.dataset.x]=c.checked;draw()});
+$('nvName').oninput=draw;
+const sh=(id,v)=>$(id).classList.toggle('hide',!v);
+const R=n=>['','I','II','III'][n];
+function calc(){
+  if(S.ivd==='Y')return{ivd:1};
+  if(!S.power||!S.contact||!S.form)return null;
+  const g=F[S.power][S.contact][S.form];let c;
+  if(S.power==='passive'&&S.contact==='Y'){if(S.dur==null||S.site==null)return null;c=g[2][+S.dur][+S.site];if(!c)return{odd:1,c:S.form==='implant'?3:2,g}}
+  else if(S.power==='passive')c=g[2];
+  else if(S.contact==='Y'){if(S.inj==null)return null;c=g[2][+S.inj]}
+  else{if(S.inf==null)return null;c=g[2][+S.inf]}
+  const base=c;
+  if(X.drug||X.absorb)c=3;
+  if(S.power==='active'&&S.contact==='Y'&&X.key)c=3;
+  if(X.sterile||X.measure||X.disease)c=Math.max(c,2);
+  return{c,base,g};
+}
+function draw(){
+  sec.querySelectorAll('.nv-ops').forEach(b=>b.querySelectorAll('button').forEach(x=>x.classList.toggle('on',S[b.dataset.k]===x.dataset.v)));
+  const fb=sec.querySelector('[data-k=form]');
+  const opts=S.power&&S.contact?F[S.power][S.contact]:null;
+  const cur=fb.dataset.sig,sig=(S.power||'')+(S.contact||'');
+  if(cur!==sig){fb.dataset.sig=sig;fb.innerHTML=opts?Object.entries(opts).map(([k,o])=>`<button data-v="${k}"><span class="ko">${o[0]}</span><span class="zh">${o[1]}</span></button>`).join(''):'<span style="color:var(--muted);font-size:14px"><span class="ko">03·04번을 먼저 선택해 주세요.</span><span class="zh">请先回答第03、04题。</span></span>';bind(fb);fb.querySelectorAll('button').forEach(x=>x.classList.toggle('on',S.form===x.dataset.v))}
+  const ivd=S.ivd==='Y';sh('nvMain',!ivd);
+  const pc=S.power==='passive'&&S.contact==='Y';
+  sh('nvQDur',pc);sh('nvQSite',pc);sh('nvQInj',S.power==='active'&&S.contact==='Y');sh('nvQInf',S.power==='active'&&S.contact==='N');
+  const need=ivd?1:(pc?5:(S.power==='passive'?3:4));
+  const have=ivd?1:['power','contact','form'].filter(k=>S[k]).length+(pc?['dur','site'].filter(k=>S[k]!=null).length:(S.power==='active'?(S.contact==='Y'?(S.inj!=null):(S.inf!=null))?1:0:0));
+  $('nvBar').style.width=Math.min(100,Math.round(have/need*100))+'%';
+  const r=calc(),out=$('nvOut');
+  if(!r){out.innerHTML='<p class="nv-empty"><span class="ko">왼쪽 질문에 답하면 예상 등급이 여기에 표시됩니다.</span><span class="zh">回答左侧问题后，预估类别将显示在此处。</span></p>';window.__nv=null;return}
+  if(r.ivd){out.innerHTML='<div class="nv-big">IVD</div><p class="nv-sub"><span class="ko">체외진단시약은 별도의 IVD 분류 체계(제1~3류)로 판정됩니다. 협회가 품목별로 확인해 드립니다.</span><span class="zh">体外诊断试剂适用单独的分类体系（第一至第三类），协会将按品种为您确认。</span></p>';window.__nv={ko:'IVD(체외진단) — 별도 분류',zh:'IVD（体外诊断）'};return}
+  const flags=[];
+  if(r.odd)flags.push(['입력 조합이 표준 분류표에 없어 개별 판정이 필요합니다.','该组合不在标准判定表中，需单独界定。']);
+  if(X.animal)flags.push(['동물 유래 원료: 추가 안전성 자료와 III류 관리 가능성 검토 필요','动物源性材料：需补充安全性资料，可能按第三类管理']);
+  if(X.ai)flags.push(['AI 기능: 「인공지능 의료기기 심사 지도원칙」 적용, 등급 상향 가능','AI功能：适用《人工智能医疗器械注册审查指导原则》，类别可能上调']);
+  const c=r.c;
+  const imp={1:['NMPA 제1류 신고(备案)','NMPA第一类备案'],2:['NMPA 제2류 등록 · 기술심사','NMPA第二类注册 · 技术审评'],3:['NMPA 제3류 등록 · 기술심사(임상평가 핵심)','NMPA第三类注册 · 技术审评（临床评价为关键）']}[c];
+  const loc={1:['시(市)급 신고 + 생산 신고','市级备案 + 生产备案'],2:['산둥성 약감국 등록 + 생산허가','山东省药监局注册 + 生产许可'],3:['NMPA 등록 + 성급 생산허가','NMPA注册 + 省级生产许可']}[c];
+  out.innerHTML=`<div class="nv-big nv-c${c}">${R(c)}<small class="ko">등급</small><small class="zh">类</small></div>
+   <p class="nv-sub"><span class="ko">${r.g[0]} 기준 ${R(r.base)}등급${c!==r.base?` → 해당 사항 반영 ${R(c)}등급`:''}</span><span class="zh">按「${r.g[1]}」判定为第${R(r.base)}类${c!==r.base?`，结合适用情况调整为第${R(c)}类`:''}</span></p>
+   <div class="nv-path"><div><b><span class="ko">경로 A · 수입 등록</span><span class="zh">路径A · 进口注册</span></b><span class="ko">${imp[0]} · 중국 내 대리인 지정</span><span class="zh">${imp[1]} · 指定境内代理人</span></div>
+   <div><b><span class="ko">경로 B · 위고 산업단지 현지생산</span><span class="zh">路径B · 威高产业园本地生产</span></b><span class="ko">${loc[0]}</span><span class="zh">${loc[1]}</span></div></div>
+   ${flags.map(f=>`<div class="nv-flag"><span class="ko">⚠ ${f[0]}</span><span class="zh">⚠ ${f[1]}</span></div>`).join('')}`;
+  const nm=$('nvName').value.trim();
+  window.__nv={ko:`${nm||'(제품명 미입력)'} — 예상 NMPA ${R(c)}등급 (${r.g[0]})${flags.length?' / 추가검토 '+flags.length+'건':''}`,zh:`${nm||'(未填写)'} — 预估NMPA第${R(c)}类（${r.g[1]}）`};
+}
+$('nvCta').addEventListener('click',()=>{
+  const f=document.getElementById('fm');if(!f)return;
+  const ck=f.querySelector('input[name=it][value^="인증"]');if(ck)ck.checked=true;
+  if(window.__nv){const line='[NMPA AI 자가진단 / NMPA自测] '+window.__nv.ko+' | '+window.__nv.zh;if(!f.msg.value.includes('[NMPA AI'))f.msg.value=line+(f.msg.value?'\n'+f.msg.value:'')+'\n';}
+  setTimeout(()=>f.company&&f.company.focus({preventScroll:true}),700);
+});
+draw();
+})();
+</script>
+
+
+<!-- =====================================================
+     APPLY
+     ===================================================== -->
+<section id="apply" class="apply">
+  <div class="apply-bg" data-bg="news-2"></div>
+  <div class="wrap">
+    <div>
+      <span class="kicker rv" style="color:#7CC0FF">Apply Now</span>
+      <h2 class="rv d1"><span class="ko">지금, 중국 시장 진출의<br>첫걸음을 함께하세요</span><span class="zh">现在，携手迈出<br>进入中国市场的第一步</span></h2>
+      <p class="d rv d2"><span class="ko">2027 CKMDM 매칭회와 위고 산업단지 한국관 참가 상담을 받고 있습니다. 협회 담당자가 기업 상황에 맞는 진출 단계를 안내드립니다.</span><span class="zh">现正受理2027 CKMDM对接会及威高产业园韩国馆参加咨询。协会负责人将根据企业情况提供相应的进入方案。</span></p>
+      <div class="cbox rv d3">
+        <a href="mailto:kcstsa@nate.com"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg></i><div><small>E-MAIL</small>kcstsa@nate.com</div></a>
+        <a href="https://kcstsa.or.kr" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></i><div><small>WEBSITE</small>kcstsa.or.kr</div></a>
+        <div><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 22s8-6 8-12a8 8 0 1 0-16 0c0 6 8 12 8 12z"/><circle cx="12" cy="10" r="3"/></svg></i><div><small>OFFICE</small><span class="ko">중국 산둥성 웨이하이 경제기술개발구 홍콩로 18-1 스마트빌딩 905호</span><span class="zh">中国山东省威海市经济技术开发区香港路18-1号 905室</span></div></div>
+      </div>
+    </div>
+    <form id="fm" class="rv d1" novalidate>
+      <h3><span class="ko">참가 상담 신청서</span><span class="zh">参加咨询申请表</span></h3>
+      <p><span class="ko">작성해 주시면 협회 담당자가 연락드립니다.</span><span class="zh">填写后协会负责人将与您联系。</span></p>
+      <div class="row">
+        <div class="f"><label><span class="ko">회사명</span><span class="zh">公司名称</span> <em>*</em></label><input name="company"></div>
+        <div class="f"><label><span class="ko">담당자 / 직함</span><span class="zh">联系人 / 职务</span> <em>*</em></label><input name="person"></div>
+      </div>
+      <div class="row">
+        <div class="f"><label><span class="ko">연락처</span><span class="zh">联系电话</span> <em>*</em></label><input name="phone"></div>
+        <div class="f"><label><span class="ko">이메일</span><span class="zh">邮箱</span> <em>*</em></label><input name="email" type="email"></div>
+      </div>
+      <div class="f"><label><span class="ko">제품 분야</span><span class="zh">产品领域</span></label>
+        <select name="field">
+          <option>의료기기 신소재 · 医疗器械新材料</option>
+          <option>가정용 의료기기 · 家用医疗器械</option>
+          <option>디지털 헬스케어 · 数字健康</option>
+          <option>진단·영상 · 诊断·影像</option>
+          <option>치료·수술 · 治疗·手术</option>
+          <option>기타 · 其他</option>
+        </select>
+      </div>
+      <div class="f"><label><span class="ko">관심 프로그램 (복수 선택)</span><span class="zh">感兴趣的项目（可多选）</span></label>
+        <div class="chips">
+          <label><input type="checkbox" name="it" value="매칭회/对接会"><span class="ko">매칭회</span><span class="zh">对接会</span></label>
+          <label><input type="checkbox" name="it" value="한국관 입주/韩国馆入驻"><span class="ko">한국관 입주</span><span class="zh">韩国馆入驻</span></label>
+          <label><input type="checkbox" name="it" value="현지생산/本地生产"><span class="ko">현지생산</span><span class="zh">本地生产</span></label>
+          <label><input type="checkbox" name="it" value="공급·유통/供应·流通"><span class="ko">공급·유통</span><span class="zh">供应·流通</span></label>
+          <label><input type="checkbox" name="it" value="인증·허가/认证·注册"><span class="ko">인증·허가</span><span class="zh">认证·注册</span></label>
+          <label><input type="checkbox" name="it" value="투자 연계/投资对接"><span class="ko">투자 연계</span><span class="zh">投资对接</span></label>
+        </div>
+      </div>
+      <div class="f"><label><span class="ko">문의 내용</span><span class="zh">咨询内容</span></label><textarea name="msg" rows="3"></textarea></div>
+      <button type="submit" class="btn btn-p"><span class="ko">상담 신청하기</span><span class="zh">提交咨询申请</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <div id="fmMsg" class="fmsg" role="status"></div>
+      <p class="note"><span class="ko">신청 내용은 한중과학기술서비스협회(kcstsa@nate.com)로 바로 전달됩니다.</span><span class="zh">申请内容将直接发送至中韩科学技术服务协会（kcstsa@nate.com）。</span></p>
+    </form>
+  </div>
+</section>
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
 <footer>
   <div class="wrap">
     <div class="ft">
-      <div><img src="img02.png" alt="한중과학기술서비스협회 KCSTSA"></div>
-      <div class="ft-info">
-        <div><b><span class="ko">한중과학기술서비스협회</span><span class="zh">韩中科学技术服务协会</span></b> (KCSTSA)</div>
-        <div><span class="ko">중국 산둥성 웨이하이시 경제기술개발구 홍콩로 18-1 스마트빌딩 905호</span><span class="zh">中国山东省威海市经济技术开发区香港路18-1号 智慧大厦905室</span></div>
-        <div>T. +86 176 1542 1772 · E. kcstsa@nate.com</div>
-        <div class="ft-links"><a href="#greeting"><span class="ko">협회소개</span><span class="zh">关于协会</span></a><a href="#programs"><span class="ko">사업분야</span><span class="zh">业务领域</span></a><a href="#events"><span class="ko">대표행사</span><span class="zh">品牌活动</span></a><a href="#results"><span class="ko">주요성과</span><span class="zh">合作成果</span></a><a href="#contact"><span class="ko">협력문의</span><span class="zh">合作咨询</span></a></div>
+      <div class="fl">
+        <img data-img="logo" alt="CKMDM">
+        <p><span class="ko">China–Korea Medical Device Matching<br>한·중 의료기기 산업협력 플랫폼</span><span class="zh">China–Korea Medical Device Matching<br>中韩医疗器械产业合作平台</span></p>
+        <div class="fk"><img data-img="partner-2" alt="KCSTSA"><span>한중과학기술서비스협회</span></div>
+      </div>
+      <div>
+        <h5>MENU</h5>
+        <ul>
+          <li><a href="#program"><span class="ko">진출 프로그램</span><span class="zh">进入项目</span></a></li>
+          <li><a href="#pavilion"><span class="ko">한국관</span><span class="zh">韩国馆</span></a></li>
+          <li><a href="#recap"><span class="ko">2026 매칭회</span><span class="zh">2026对接会</span></a></li>
+          <li><a href="#gallery"><span class="ko">갤러리</span><span class="zh">图片集</span></a></li>
+          <li><a href="#news"><span class="ko">언론보도</span><span class="zh">媒体报道</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>CONTACT</h5>
+        <ul>
+          <li>E. <a href="mailto:kcstsa@nate.com">kcstsa@nate.com</a></li>
+          <li>W. <a href="https://kcstsa.or.kr" target="_blank" rel="noopener">kcstsa.or.kr</a></li>
+          <li class="ko">A. 중국 산둥성 웨이하이 경제기술개발구 홍콩로 18-1 스마트빌딩 905호</li>
+          <li class="zh">A. 中国山东省威海市经济技术开发区香港路18-1号 905室</li>
+        </ul>
       </div>
     </div>
-    <div class="copy">© KCSTSA. All Rights Reserved.</div>
+    <div class="copy"><span>© 2026 CKMDM · Korea-China Science and Technology Services Association. All Rights Reserved.</span><span class="ko">주최 웨이하이시 상무국 · 공동주관 WEGO · 한중과학기술서비스협회</span><span class="zh">主办 威海市商务局 · 联合承办 威高集团 · 中韩科学技术服务协会</span></div>
   </div>
 </footer>
-<a href="#home" class="totop" id="totop">TOP</a>
+
+<button class="top-btn" id="topBtn" aria-label="top">↑</button>
+
+<div class="lb" id="lb">
+  <button class="x" aria-label="close">✕</button>
+  <button class="pv" aria-label="prev">‹</button>
+  <img src="" alt="">
+  <button class="nx" aria-label="next">›</button>
+  <p></p>
+</div>
 
 <script>
-(function(){
-  var b=document.body,bKo=document.getElementById('bKo'),bZh=document.getElementById('bZh');
-  var caps=[["2026 CKMDM 한·중 의료기기 매칭 · 웨이하이","2026 CKMDM 中韩医疗器械对接会 · 威海"],["한·중 협력 기업 전략 발표회","中韩合作企业战略发布会"],["2026 위고 글로벌 파트너스 컨퍼런스","2026威高全球合作伙伴大会"]];
-  var cur=0;
-  function setLang(l){
-    b.classList.toggle('zh',l==='zh');
-    document.documentElement.lang=l==='zh'?'zh-CN':'ko';
-    bKo.classList.toggle('sel',l!=='zh');bZh.classList.toggle('sel',l==='zh');
-    document.title=l==='zh'?'韩中科学技术服务协会 KCSTSA':'한중과학기술서비스협회 KCSTSA';
-    var o=document.querySelectorAll('#type option');
-    for(var i=0;i<o.length;i++)o[i].textContent=o[i].getAttribute('data-'+(l==='zh'?'zh':'ko'));
-    capSet();
-    try{localStorage.setItem('kcstsa_lang',l)}catch(e){}
-  }
-  bKo.onclick=function(){setLang('ko')};bZh.onclick=function(){setLang('zh')};
+const IMGS={"partner-3": "ck01.png", "kic-2025": "ck02.jpg", "event-schedule": "ck03.png", "kic-9": "ck04.jpg", "event-target": "ck05.png", "program-2": "ck06.jpg", "ck-stage": "ck07.jpg", "alliance": "ck08.jpg", "event-place": "ck09.png", "news-1": "ck10.jpg", "partner-1": "ck11.png", "wego-stage": "ck12.jpg", "wego-stage2": "ck13.jpg", "partner-2": "ck14.png", "news-3": "ck15.jpg", "logo": "ck16.png", "venue-map": "ck17.jpg", "news-2": "ck18.jpg", "partner-4": "ck19.png", "partner-5": "ck20.png", "program-1": "ck21.jpg", "wego-visit": "ck22.jpg", "wego-innovation": "ck23.jpg", "wego-main": "ck24.png", "logo-color": "ck25.png", "kic-7": "ck26.jpg", "program-3": "ck27.jpg", "wego-network": "ck28.jpg"};
+document.querySelectorAll('[data-img]').forEach(e=>{e.src=IMGS[e.dataset.img];});
+document.querySelectorAll('[data-bg]').forEach(e=>{e.style.backgroundImage='url('+IMGS[e.dataset.bg]+')';});
+</script>
+<script>
+/* =========================================================
+   갤러리 사진 목록 — 사진을 추가하려면 여기에 한 줄씩 추가
+   { src:'이미지 주소', ko:'한국어 설명', zh:'中文说明' }
+   ========================================================= */
+const GALLERY = [
+  { src:'ck-stage',        ko:'2026 CKMDM 매칭회 본행사장',          zh:'2026 CKMDM对接会主会场' },
+  { src:'program-2',       ko:'1:1 맞춤형 비즈니스 상담',            zh:'一对一定制商务洽谈' },
+  { src:'news-1',          ko:'한·중 참가자 단체 기념촬영',           zh:'中韩参会人员集体合影' },
+  { src:'wego-visit',      ko:'위고그룹 본사 방문',                  zh:'考察威高集团总部' },
+  { src:'program-1',       ko:'참가기업 전시 부스 운영',             zh:'参会企业展位' },
+  { src:'program-3',       ko:'한·중 기업 IR 로드쇼',                zh:'中韩企业IR路演' },
+  { src:'alliance',        ko:'중한 의료기기산업 융합발전연맹 출범',   zh:'中韩医疗器械产业融合发展联盟正式启动' },
+  { src:'news-2',          ko:'WEGO HALL 행사장',                   zh:'WEGO HALL会场' },
+  { src:'wego-stage',      ko:'위고그룹 행사 현장',                  zh:'威高集团活动现场' },
+  { src:'wego-innovation', ko:'위고그룹 생산·연구 시설',              zh:'威高集团生产研发设施' },
+  { src:'wego-stage2',     ko:'위고그룹 행사 현장',                  zh:'威高集团活动现场' },
+  { src:'wego-network',    ko:'위고그룹 본사',                       zh:'威高集团总部' },
+  { src:'venue-map',       ko:'웨이하이웨이 호텔',                   zh:'威海卫大酒店' },
+];
 
-  // slider
-  var sl=document.querySelectorAll('.slide'),dt=document.querySelectorAll('#dots button'),cap=document.getElementById('cap');
-  function capSet(){cap.textContent=caps[cur][b.classList.contains('zh')?1:0];}
-  function go(i){sl[cur].classList.remove('act');dt[cur].classList.remove('act');cur=i;sl[cur].classList.add('act');dt[cur].classList.add('act');capSet();}
-  var timer=setInterval(function(){go((cur+1)%sl.length)},6000);
-  dt.forEach(function(d,i){d.onclick=function(){clearInterval(timer);go(i);timer=setInterval(function(){go((cur+1)%sl.length)},6000);}});
-  var saved=null;try{saved=localStorage.getItem('kcstsa_lang')}catch(e){}
-  setLang(saved==='zh'?'zh':'ko');
+// ---------- 언어 ----------
+const setLang = l => {
+  document.documentElement.lang = l;
+  document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.l === l));
+  try { localStorage.setItem('ckmdm-lang', l); } catch(e) {}
+  renderGallery();
+};
+document.querySelectorAll('.lang button').forEach(b => b.onclick = () => setLang(b.dataset.l));
 
-  // header / top
-  var hd=document.getElementById('hd'),tt=document.getElementById('totop');
-  function sc(){hd.classList.toggle('on',window.scrollY>60);tt.classList.toggle('show',window.scrollY>700)}
-  window.addEventListener('scroll',sc,{passive:true});sc();
+// ---------- 갤러리 ----------
+const gal = document.getElementById('gal');
+function renderGallery(){
+  const zh = document.documentElement.lang === 'zh';
+  gal.innerHTML = GALLERY.map((g,i)=>`<figure class="rv in" data-i="${i}"><img src="${IMGS[g.src]}" alt="${zh?g.zh:g.ko}"><figcaption>${zh?g.zh:g.ko}</figcaption></figure>`).join('');
+}
+const lb = document.getElementById('lb'), lbImg = lb.querySelector('img'), lbCap = lb.querySelector('p');
+let cur = 0;
+const show = i => { cur = (i+GALLERY.length)%GALLERY.length; const g = GALLERY[cur]; lbImg.src = IMGS[g.src]; lbCap.textContent = `${cur+1} / ${GALLERY.length} · ${document.documentElement.lang==='zh'?g.zh:g.ko}`; lb.classList.add('on'); document.body.style.overflow='hidden'; };
+const hide = () => { lb.classList.remove('on'); document.body.style.overflow=''; };
+gal.addEventListener('click', e => { const f = e.target.closest('figure'); if (f) show(+f.dataset.i); });
+lb.querySelector('.x').onclick = hide;
+lb.querySelector('.pv').onclick = () => show(cur-1);
+lb.querySelector('.nx').onclick = () => show(cur+1);
+lb.addEventListener('click', e => { if (e.target === lb) hide(); });
+addEventListener('keydown', e => { if (!lb.classList.contains('on')) return; if (e.key==='Escape') hide(); if (e.key==='ArrowLeft') show(cur-1); if (e.key==='ArrowRight') show(cur+1); });
 
-  // menu
-  var nav=document.getElementById('nav');
-  document.getElementById('burger').onclick=function(){nav.classList.toggle('open');hd.classList.add('on')};
-  nav.addEventListener('click',function(e){if(e.target.closest('a'))nav.classList.remove('open')});
+// 초기 언어
+let init = 'ko';
+try { const q = new URLSearchParams(location.search).get('lang'); init = q || localStorage.getItem('ckmdm-lang') || ((navigator.language||'').startsWith('zh') ? 'zh' : 'ko'); } catch(e) {}
+setLang(init === 'zh' ? 'zh' : 'ko');
 
-  // reveal + counters (numbers are already correct in HTML; animation only enhances)
-  function count(el){
-    var n=+el.getAttribute('data-n'),sm=el.querySelector('small'),t0=null;
-    function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1600),v=Math.round(n*(1-Math.pow(1-p,3)));
-      el.firstChild.nodeValue=v.toLocaleString('en-US');if(p<1)requestAnimationFrame(f);}
-    requestAnimationFrame(f);
-  }
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
-    document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
-    var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){count(e.target);io2.unobserve(e.target)}})},{threshold:.6});
-    document.querySelectorAll('[data-n]').forEach(function(el){io2.observe(el)});
-  }else document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
+// ---------- 헤더 / 탑버튼 ----------
+const hdr = document.getElementById('hdr'), topBtn = document.getElementById('topBtn');
+const onScroll = () => { hdr.classList.toggle('on', scrollY > 60); topBtn.classList.toggle('on', scrollY > 700); };
+addEventListener('scroll', onScroll, {passive:true}); onScroll();
+topBtn.onclick = () => scrollTo({top:0,behavior:'smooth'});
 
-  // form — kcstsa@nate.com 으로 바로 전송 (FormSubmit). 실패 시 메일 앱으로 대체
-  var FORM_ENDPOINT='https://formsubmit.co/ajax/kcstsa@nate.com';
-  var form=document.getElementById('form');
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    var f=e.target,zh=b.classList.contains('zh'),note=document.getElementById('note'),btn=f.querySelector('button[type=submit]');
-    if(f._honey&&f._honey.value)return;
-    if(!f.name.value.trim()||!f.org.value.trim()||!f.email.value.trim()||!f.msg.value.trim()){
-      note.textContent=zh?'请填写所有必填项（*）。':'필수 항목(*)을 모두 입력해 주십시오.';note.classList.add('show');return;}
-    var data={
-      '_subject':'[KCSTSA 홈페이지 협력문의] '+f.org.value+' / '+f.name.value,
-      '_template':'table','_captcha':'false','_replyto':f.email.value,
-      '성함':f.name.value,'회사·기관':f.org.value,'연락처':f.phone.value,'이메일':f.email.value,
-      '문의 분야':f.type.value,'문의 내용':f.msg.value,'작성 언어':zh?'中文':'한국어'
-    };
-    btn.disabled=true;btn.style.opacity=.6;
-    note.textContent=zh?'正在发送…':'전송 중입니다…';note.classList.add('show');
-    function fallback(){
-      var t='';for(var k in data){if(k.charAt(0)!=='_')t+=k+': '+data[k]+'\n';}
-      try{window.location.href='mailto:kcstsa@nate.com?subject='+encodeURIComponent(data._subject)+'&body='+encodeURIComponent(t);}catch(err){}
-      note.textContent=zh?'自动发送失败，已打开邮件应用。如未打开，请发送至 kcstsa@nate.com。':'자동 전송에 실패해 메일 앱을 엽니다. 열리지 않으면 kcstsa@nate.com 으로 보내 주십시오.';
-      btn.disabled=false;btn.style.opacity=1;
-    }
-    try{
-      fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
-      .then(function(r){return r.json().catch(function(){return {}}).then(function(j){return {ok:r.ok,j:j}})})
-      .then(function(res){
-        if(res.ok&&String(res.j.success)!=='false'){
-          note.textContent=zh?'咨询已成功提交，我们将尽快与您联系。':'문의가 정상적으로 접수되었습니다. 확인 후 연락드리겠습니다.';
-          f.reset();btn.disabled=false;btn.style.opacity=1;
-        }else fallback();
-      }).catch(fallback);
-    }catch(err){fallback();}
-  });
-})();
+// ---------- 모바일 메뉴 ----------
+const gnb = document.getElementById('gnb'), ham = document.getElementById('ham');
+ham.onclick = () => { gnb.classList.toggle('open'); ham.classList.toggle('x'); hdr.classList.add('on'); };
+gnb.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { gnb.classList.remove('open'); ham.classList.remove('x'); }));
+
+// ---------- 일정 탭 ----------
+document.querySelectorAll('.dtabs button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.dtabs button').forEach(x => x.classList.toggle('on', x === b));
+  document.querySelectorAll('.dpanel').forEach(p => p.classList.toggle('on', p.dataset.p === b.dataset.d));
+});
+
+// ---------- 등장 애니메이션 ----------
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+// ---------- 숫자 카운터 ----------
+const cio = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const el = e.target, n = +el.dataset.n, t0 = performance.now(), dur = 1600;
+  const step = t => { const p = Math.min((t-t0)/dur,1), v = Math.round(n*(1-Math.pow(1-p,3))); el.textContent = v.toLocaleString(); if (p<1) requestAnimationFrame(step); };
+  requestAnimationFrame(step); cio.unobserve(el);
+}), {threshold:.5});
+document.querySelectorAll('.cnt').forEach(el => cio.observe(el));
+
+// ---------- 신청서 → kcstsa@nate.com 실제 전송 (FormSubmit) ----------
+const FORM_TO = 'kcstsa@nate.com';
+const fm = document.getElementById('fm'), fmBtn = fm.querySelector('button[type=submit]'), fmMsg = document.getElementById('fmMsg');
+const say = (ok, ko, zh) => { fmMsg.className = 'fmsg ' + (ok ? 'ok' : 'err'); fmMsg.innerHTML = `<span class="ko">${ko}</span><span class="zh">${zh}</span>`; };
+fm.addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = e.target, zh = document.documentElement.lang === 'zh';
+  if (f._honey.value) return;                       // 스팸 차단
+  for (const n of ['company','person','phone','email']) if (!f[n].value.trim()) { f[n].focus(); say(false,'필수 항목을 입력해 주세요.','请填写必填项。'); return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.value.trim())) { f.email.focus(); say(false,'이메일 형식을 확인해 주세요.','请检查邮箱格式。'); return; }
+  const it = [...f.querySelectorAll('input[name=it]:checked')].map(i=>i.value).join(', ') || '-';
+  const data = {
+    _subject: `[CKMDM 참가 상담 신청] ${f.company.value.trim()} / ${f.person.value.trim()}`,
+    _template: 'table', _captcha: 'false', _replyto: f.email.value.trim(),
+    '회사명 / 公司名称': f.company.value.trim(),
+    '담당자·직함 / 联系人': f.person.value.trim(),
+    '연락처 / 电话': f.phone.value.trim(),
+    '이메일 / 邮箱': f.email.value.trim(),
+    '제품 분야 / 产品领域': f.field.value,
+    '관심 프로그램 / 感兴趣项目': it,
+    '문의 내용 / 咨询内容': f.msg.value.trim() || '-',
+    '신청 언어 / 语言': zh ? '中文' : '한국어',
+    '신청 일시 / 时间': new Date().toLocaleString('ko-KR', {timeZone:'Asia/Seoul'})
+  };
+  fmBtn.disabled = true; fmBtn.style.opacity = .6;
+  say(true,'전송 중입니다…','正在提交…');
+  try {
+    const r = await fetch('https://formsubmit.co/ajax/' + FORM_TO, { method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify(data) });
+    const j = await r.json().catch(()=>({}));
+    if (r.ok && String(j.success) === 'true') {
+      f.reset();
+      say(true,'✓ 신청이 접수되었습니다. 협회 담당자가 빠르게 연락드리겠습니다.','✓ 申请已提交，协会负责人将尽快与您联系。');
+    } else throw new Error(j.message || r.status);
+  } catch (err) {
+    say(false,
+      `전송에 실패했습니다. 잠시 후 다시 시도하시거나 <a href="mailto:${FORM_TO}" style="text-decoration:underline">${FORM_TO}</a>로 직접 보내주세요.`,
+      `提交失败。请稍后重试，或直接发送邮件至 <a href="mailto:${FORM_TO}" style="text-decoration:underline">${FORM_TO}</a>。`);
+  } finally { fmBtn.disabled = false; fmBtn.style.opacity = 1; }
+});
 </script>
 </body>
 </html>
